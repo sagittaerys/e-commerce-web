@@ -22,28 +22,28 @@ export default function Header() {
           {/* Image Covered */}
 
           <ul className="flex mx-5 gap-5 pl-60">
-            <Link className="flex items-center gap-2" href="/support">
-              <BiSupport className="text-lg text-gray-600" />{" "}
+            <Link className="flex items-center gap-1" href="/support">
+              <BiSupport className="w-[24px] h-[24px] text-gray-600" />{" "}
               <p className="icon-text">Support</p>
             </Link>
 
-            <Link className="flex items-center gap-2" href="/store">
-              <IoLocationSharp className="text-lg text-gray-600" />
+            <Link className="flex items-center gap-1" href="/store">
+              <IoLocationSharp className="w-[24px] h-[24px] text-gray-600" />
               <p className="icon-text">Find a store</p>
             </Link>
           </ul>
 
           <ul className="flex gap-4">
             <Link href="/favorites">
-              <FaRegHeart className="text-lg" />
+              <FaRegHeart className="w-[24px] h-[24px]" />
             </Link>
 
             <Link href="/account">
-              <IoPersonOutline className="text-lg" />
+              <IoPersonOutline className="w-[24px] h-[24px]" />
             </Link>
 
             <Link href="/shop">
-              <MdOutlineShoppingBag className="text-lg" />
+              <MdOutlineShoppingBag className="w-[24px] h-[24px]" />
             </Link>
           </ul>
         </div>
