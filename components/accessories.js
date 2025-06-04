@@ -1,12 +1,61 @@
-const products = [
+const accessories = [
+  {
+      id: 1,    
+      name: 'Name and Characteristics',
+      discountedPrice: 74.95,
+      actualPrice: 121.00,
+      image: '/Image XVII.png',
+      
+    },
     {
+      id: 2,
+      name: 'Name and Characteristics',
+      discountedPrice: 74.95,
+      actualPrice: 121.00,
+      image: '/Image XVIII.png',
+      
+    },
+    {
+      id: 3,
+      name: 'Name and Characteristics',
+      discountedPrice: 74.95,
+      actualPrice: 121.00,
+      image: '/Image XIX.png',
+      
+    },
+    {
+      id: 4,
+      name: 'Name and Characteristics',
+      discountedPrice: 74.95,
+      actualPrice: 121.00,
+      image: '/Image XX.png',
+      
+    },
+    {
+      id: 5,
+      name: 'Name and Characteristics',
+      discountedPrice: 74.95,
+      actualPrice: 121.00,
+      image: '/Image XXI.png',
+      
+    },
+    {
+      id: 6,
+      name: 'Name and Characteristics',
+      discountedPrice: 74.95,
+      actualPrice: 121.00,
+      image: '/Image XXII.png',
+      
+    },
+    {
+      id: 7,
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
       image: '/Image.png',
-      
     },
     {
+      id: 8,
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -14,47 +63,7 @@ const products = [
       
     },
     {
-      name: 'Name and Characteristics',
-      discountedPrice: 74.95,
-      actualPrice: 121.00,
-      image: '/Image II.png',
-      
-    },
-    {
-      name: 'Name and Characteristics',
-      discountedPrice: 74.95,
-      actualPrice: 121.00,
-      image: '/Image III.png',
-      
-    },
-    {
-      name: 'Name and Characteristics',
-      discountedPrice: 74.95,
-      actualPrice: 121.00,
-      image: '/Image IV.png',
-      
-    },
-    {
-      name: 'Name and Characteristics',
-      discountedPrice: 74.95,
-      actualPrice: 121.00,
-      image: '/Image V.png',
-      
-    },
-    {
-      name: 'Name and Characteristics',
-      discountedPrice: 74.95,
-      actualPrice: 121.00,
-      image: '/Image.png',
-    },
-    {
-      name: 'Name and Characteristics',
-      discountedPrice: 74.95,
-      actualPrice: 121.00,
-      image: '/Image I.png',
-      
-    },
-    {
+      id: 9,
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -62,7 +71,6 @@ const products = [
       
     },
 
-  ]
+]
 
-
-  export default products;
+export default accessories;

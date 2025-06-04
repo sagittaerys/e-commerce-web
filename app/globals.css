@@ -1,66 +1,101 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-body{
-  font-family: 'Inter', sans-serif ;
+body {
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
-  color: #23263B;
-  
+  color: #23263b;
 }
 
-.banner-text{
-   line-height: 70px;
+.logo{
+  width: 180.47px !important;
+  height: 34.22px !important;
 }
 
-.icon-text{
+.banner-text {
+  line-height: 70px;
+}
+
+.icon-text {
   font-size: 12px;
 }
 
-.xs-default{
-  background-color: #23263B;
+.xs-default {
+  background-color: #23263b;
   font-size: 12px;
 }
 
-
-
-.search{
+.search {
   font-size: 12px;
-  
 }
 
-.container{
+.container {
   max-width: 1280px;
 
   /* border: 1px solid black; */
 }
 
-.line{
-  color: #23263B;
+.line {
+  color: #23263b;
 }
 
-.summer-card{
+.summer-card {
   /* border: 1px solid red; */
-  
 }
 
 /* HOLY GRAIL-- DO NOT TOUCH!!!! */
 .hide-scrollbar {
-  -ms-overflow-style: none;  
-  scrollbar-width: none;     
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   overflow-x: auto;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;            
+  display: none;
 }
 
+.slick-track{
+  display: flex !important;
+  justify-content: space-evenly;
+  
+}
 
+.slick-slider{
+  display: flex !important;
+  position: relative;
+}
+
+.slick-dots{
+  display: none !important;
+}
+
+.slick-list{
+ 
+  width: 1200px;
+ 
+}
+
+.slick-arrow{
+  display: none !important;
+}
+
+.small-screen{
+  display: none;
+}
 
 @media screen and (min-width: 1400px) {
-  .container{
+  .container {
     max-width: 1400px;
     margin: 0 auto;
   }
+}
+
+/* Responsiveness */
+
+/* Phones */
+
+@media (max-width: 376px) {
+   
 }
