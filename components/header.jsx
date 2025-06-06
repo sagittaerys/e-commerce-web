@@ -24,14 +24,14 @@ export default function Header() {
       </div>
 
       <div className="container h-[147.22px]" id="small-height">
-        <div className="main-header flex justify-between px-10 py-5">
+        <div className="main-header flex justify-between px-10 py-4">
            <Link href= "/">
           <Image
-            src="/logo.png"
+            src="/logo-sage.png"
             className="logo"
             alt="logo"
             width={185.47}
-            height={34.22}
+            height={40.22}
           />
           {/* Image Covered */}
            
@@ -59,7 +59,7 @@ export default function Header() {
                 <p className="icon-text">Support</p>
               </Link>
 
-              <Link className="flex unique-sm items-center gap-1" href="/store">
+              <Link className="flex unique-sm items-center gap-1" href="/find-store">
                 <IoLocationSharp className="w-[24px] h-[24px] text-gray-600" />
                 <p className="icon-text">Find a store</p>
                 <p className="small-screen">STORE</p>
