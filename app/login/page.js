@@ -32,13 +32,13 @@ const handleSubmit = (e) => {
   return(
     <div className="container">
 
-            <div className="reg-container justify-center items-center flex py-10 px-10">
+            <div className="reg-container gap-10 justify-between items-center flex py-10 px-10">
             
-                    <div className="page-icon w-[40%]">
+                    <div className="page-icon w-[50%]">
                       <Image src="/login.png" alt="" width={401.33} height={327.33} />
                     </div>
-                    <div className="reg-form w-[60%]">
-                      <h1 className="font-bold text-[24px] text-[#23263B]">Welcome Back, Big Stepper!</h1>
+                    <div className="reg-form w-[50%]">
+                      <h1 className="login-header font-bold text-[24px] text-[#23263B]">Welcome Back, Big Stepper!</h1>
                       <span className="text-[14px] text-[#91929D]">
                         Login To Step Into Style....
                       </span>

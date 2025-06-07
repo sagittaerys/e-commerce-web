@@ -26,13 +26,16 @@ export default function Header() {
       <div className="container h-[147.22px]" id="small-height">
         <div className="main-header flex justify-between px-10 py-4">
            <Link href= "/">
+           <div className="flex gap-2 items-center">
           <Image
-            src="/logo-sage.png"
+            src="/sage-centaur.png"
             className="logo"
             alt="logo"
-            width={185.47}
-            height={40.22}
+            width={40.47}
+            height={35.22}
           />
+          <h1 className="logo-text">Sagittaerean Mall</h1>
+           </div>
           {/* Image Covered */}
            
            </Link>

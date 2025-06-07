@@ -2,6 +2,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+
+@font-face {
+  font-family: 'Glitten';
+  src: url('/fonts/Glitten-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -10,8 +18,14 @@ body {
 }
 
 .logo{
-  width: 200.47px !important;
+  width: 50.47px !important;
   height: 50.22px !important;
+  color: #23263b;
+}
+
+.logo-text, .find-header, .support-header, .register , .login-header{
+  font-family: 'Glitten', sans-serif;
+  color: #23263b;
 }
 
 .banner-text {

@@ -50,7 +50,7 @@ const handleSubmit = (e) => {
           <Image src="/login.png" alt="" width={401.33} height={327.33} />
         </div>
         <div className="reg-form w-[50%]">
-          <h1 className="font-bold text-[24px] text-[#23263B]">Register</h1>
+          <h1 className="register font-bold text-[24px] text-[#23263B]">Register</h1>
           <span className="text-[14px] text-[#91929D]">
             Step Into Style....
           </span>
