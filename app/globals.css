@@ -23,9 +23,13 @@ body {
   color: #23263b;
 }
 
-.logo-text, .find-header, .support-header, .register , .login-header{
+.logo-text, .find-header, .support-header, .register , .login-header, .section-header{
   font-family: 'Glitten', sans-serif;
   color: #23263b;
+}
+
+.unique-text{
+    font-family: 'Glitten', sans-serif;
 }
 
 .banner-text {

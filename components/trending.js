@@ -11,7 +11,7 @@ export default function Trending() {
   return (
     <div className="container px-10 w-full pb-[64px] pt-[64px]">
 
-      <p className="  pb-3 text-[32px] font-semibold">
+      <p className="section-header  pb-3 text-[32px] font-semibold">
         TRENDING NOW
       </p>
 

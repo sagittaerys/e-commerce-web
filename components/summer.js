@@ -5,7 +5,7 @@ import { IoMdStar } from "react-icons/io";
 export default function Summer() {
   return (
     <div className="container px-10 bg-[#F4F4F5] pb-[64px] pt-[64px]">
-      <p className="  pt-15  pb-3 text-[32px] font-semibold tracking-wide">
+      <p className="section-header  pt-15  pb-3 text-[32px] font-semibold tracking-wide">
         SPRING/SUMMER 2021
       </p>
 
@@ -83,7 +83,7 @@ export default function Summer() {
 
           <div className="card-details">
             <span className="text-gray-600 text-[10px] mt-1">BRAND/ TYPE</span>
-            <h3 className="font-bold">Name and Characteristics</h3>
+            <h3>Name and Characteristics</h3>
 
             <div className="flex">
               <p className="font-bold">€ 74.95</p>
@@ -119,7 +119,7 @@ export default function Summer() {
 
           <div className="card-details">
             <span className="text-gray-600 text-[10px] mt-1">BRAND/ TYPE</span>
-            <h3 className="font-bold">Name and Characteristics</h3>
+            <h3>Name and Characteristics</h3>
 
             <div className="flex">
               <p className="font-bold">€ 74.95</p>

@@ -5,7 +5,7 @@ import { MdOutlineHeadsetMic } from "react-icons/md";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import { IoLocationSharp } from "react-icons/io5";
+import { MdAddLocationAlt } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
 import { MdOutlineShoppingBag } from "react-icons/md";
@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header>
       <div className="xs-default text-center text-white py-1.5">
-        <span>20% Off Code: SPRING21 - Terms Apply</span>
+        <span>20% Off Code: SAGITTAERYS29 - Terms Apply</span>
       </div>
 
       <div className="container h-[147.22px]" id="small-height">
@@ -58,12 +58,12 @@ export default function Header() {
           <div className="small-style flex items-center gap-10 w-[50%] justify-between">
             <ul className="head-icons flex mx-5 gap-5 pl-10">
               <Link className="icon-bl flex items-center gap-1" href="/support">
-                <MdOutlineHeadsetMic className="w-[24px] h-[24px] text-gray-600" />
+                <MdOutlineHeadsetMic className="w-[16px] h-[19px]text-gray-600" />
                 <p className="icon-text">Support</p>
               </Link>
 
               <Link className="flex unique-sm items-center gap-1" href="/find-store">
-                <IoLocationSharp className="w-[24px] h-[24px] text-gray-600" />
+                <MdAddLocationAlt className="w-[16px] h-[19px] text-gray-600" />
                 <p className="icon-text">Find a store</p>
                 <p className="small-screen">STORE</p>
               </Link>
@@ -71,17 +71,17 @@ export default function Header() {
 
             <ul className="flex gap-4">
               <Link href="/favorites" className="icon-bl">
-                <FaRegHeart className="w-[24px] h-[24px]" />
+                <FaRegHeart className="w-[16px] h-[19px]" />
               </Link>
 
               <Link href="/account" className="unique-sm">
-                <IoPersonOutline className="w-[24px] h-[24px]" />
+                <IoPersonOutline className="w-[16px] h-[19px]" />
 
                 <p className="small-screen">ACCOUNT</p>
               </Link>
 
               <Link href="/shop" className="unique-sm">
-                <MdOutlineShoppingBag className="w-[24px] h-[24px]" />
+                <MdOutlineShoppingBag className="w-[16px] h-[19px]" />
                 <p className="small-screen">CART</p>
               </Link>
             </ul>

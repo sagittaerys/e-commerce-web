@@ -25,7 +25,7 @@ export default function TrendingCard({
       </div>
       <div className="card-details">
         <span className="text-gray-600 text-[10px] mt-1">BRAND/ TYPE</span>
-        <h3 className="font-bold">{name}</h3>
+        <h3>{name}</h3>
 
         <div className="flex">
           <p className="font-bold">€ {discountedPrice}</p>

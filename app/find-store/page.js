@@ -1,3 +1,5 @@
+import StoreList from "@/components/FindStore/StoreList";
+
 export default function FindStore() {
 
 
@@ -12,7 +14,7 @@ export default function FindStore() {
 
       {/* The Potential Filter Field */}
 
-      <div className="filter-container border border-[#23263B] mt-8 py-12 mx-auto w-[95%] shadow-xl rounded-xl">
+      <div className="filter-container border border-[#23263B] mt-8 py-12 mx-auto w-[100%] shadow-xl rounded-xl">
         <form className="gap-2 flex px-6">
           <input
             type="text"
@@ -50,7 +52,21 @@ export default function FindStore() {
       </div>
 
 
+      <div className="mapped-cards w-full mt-20">
+          <StoreList />
+      </div>
 
+
+      <div className="w-full border rounded-xl py-5 my-20 border-[#23263B]">
+            <h2 className="text-[2rem] p-4 font-bold text-center mb-2">Interactive Map</h2>
+
+            <div className=" mx-auto rounded-2xl border-3 border-dotted mb-7 border-[#23263B] w-[95%] h-[30rem]">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1786541102906!2d55.27180147417417!3d25.19719697771098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ceb7e2!2sBurj%20Khalifa!5e0!3m2!1sen!2sng!4v1749120676891!5m2!1sen!2sng" className="w-full h-full rounded-2xl" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>  
+
+            </div>
+
+      </div>
 
 
 
