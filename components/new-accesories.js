@@ -17,7 +17,7 @@ export default function NewAccessories() {
 
 
   return (
-    <div className="container px-10 w-full pb-[64px] pt-[64px]">
+    <div id="new-arrivals" className="container px-10 w-full pb-[64px] pt-[64px]">
       <p className="section-header  pb-4 text-[32px] font-semibold">NEW IN... ACCESORIES</p>
 
       <div className="flex hide-scrollbar  scroll-smooth">

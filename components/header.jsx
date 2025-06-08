@@ -91,13 +91,13 @@ export default function Header() {
 
         <div className="section  text-[14px] px-10">
           <ul className="flex gap-4">
-            <Link className="font-bold" href="/women">
-              WOMEN
+            <Link className="font-bold" href="/fashion">
+              FASHION
             </Link>
 
-            <Link href="/men">MEN</Link>
+            <Link href="/electronics">ELECTRONICS</Link>
 
-            <Link href="/kids">KIDS</Link>
+            <Link href="/food">FOOD</Link>
           </ul>
           <hr className="line border-gray-600" />
         </div>
@@ -140,10 +140,10 @@ export default function Header() {
             <ul className="flex gap-4 font-base">
               <Link href="/sale">SALE</Link>
 
-              <Link href="/new">NEW IN</Link>
+              <Link href="#new-arrivals">NEW IN</Link>
 
-              <Link href="/clothing">CLOTHING</Link>
-              <Link href="/shoes">SHOES</Link>
+              <Link href="/fashion">CLOTHING</Link>
+              <Link href="/">SHOES</Link>
               <Link href="/accessories">ACCESSORIES</Link>
               <Link href="/brands">BRANDS</Link>
             </ul>
