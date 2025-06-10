@@ -28,12 +28,16 @@ export default function RecommendedList(){
   return(
      <Slider {...settings}>
 
+
        {recommendedProducts.map((recommended, index) => (
          <RecommendedCard key={index.id} {...recommended} />
        ))
        }
 
      </Slider>
+
+
+     
 
 
 

@@ -68,9 +68,9 @@ export default function Summer() {
 
         {/* Next From Here */}
         <div className="card-trending flex relative flex-col w-[180px] h-[276] text-[12px]">
-          <div className="heart-icon absolute z-10 pt-2 ml-34 bg-white p-1.5 mt-1 ">
+          <button className="heart-icon rounded-md absolute z-10 pt-2 ml-34 bg-white p-1.5 mt-1 ">
             <FaRegHeart />
-          </div>
+          </button>
 
           <div className="card-image">
             <Image
@@ -104,9 +104,9 @@ export default function Summer() {
 
         {/* Next From Here */}
         <div className="card-trending flex relative flex-col w-[180px] h-[276] text-[12px]">
-          <div className="heart-icon absolute z-10 pt-2 ml-34 bg-white p-1.5 mt-1 ">
+          <button className="heart-icon rounded-md absolute z-10 pt-2 ml-34 bg-white p-1.5 mt-1 ">
             <FaRegHeart />
-          </div>
+          </button>
 
           <div className="card-image">
             <Image
