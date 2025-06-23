@@ -76,7 +76,7 @@ export default function Electronics() {
           <div className="bg-[url('/slider6.png')]  bg-cover bg-left rounded-xl w-[308.98] h-[215px]">
             <div className="py-4 flex flex-col items-end">
               <div className="max-w-[118.81px]">
-                <span className="text-[12px] mt-3 text-[#23263b]">XOMIA</span>
+                <span className="text-[12px] mt-3 text-[#23263b] font-bold">XOMIA</span>
                 <p className="text-[16px] mt-3 text-[#23263b] font-bold ">
                   Sport Water Resistant Watch
                 </p>
@@ -107,17 +107,19 @@ export default function Electronics() {
         </div>
       </div>
       {/* Best Sellers */}
-      <div className="best-sellers">
+      <div id="best-sellers" className="best-sellers">
 
       <p className="section-header  pt-15  pb-3 text-[32px] font-semibold tracking-wide">
             BEST SELLERS
       </p>
-        <div className= "flex my-5 gap-5 px-10 gap-6 mx-auto hide-scrollbar">
+        <div className= "flex my-5 gap-6 px-10 mx-auto hide-scrollbar">
           <BestSellerList />
 
         </div>
 
       </div>
+
+     
     </div>
   );
 }

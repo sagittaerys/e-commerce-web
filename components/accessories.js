@@ -1,6 +1,6 @@
 const accessories = [
   {
-      id: 1,    
+      id: "accessories1",    
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -8,7 +8,7 @@ const accessories = [
       
     },
     {
-      id: 2,
+      id: "accessories2",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -16,7 +16,7 @@ const accessories = [
       
     },
     {
-      id: 3,
+      id: "accessories3",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -24,7 +24,7 @@ const accessories = [
       
     },
     {
-      id: 4,
+      id: "accessories4",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -32,7 +32,7 @@ const accessories = [
       
     },
     {
-      id: 5,
+      id: "accessories5",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -40,7 +40,7 @@ const accessories = [
       
     },
     {
-      id: 6,
+      id: "accessories6",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -48,14 +48,14 @@ const accessories = [
       
     },
     {
-      id: 7,
+      id: "accessories7",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
       image: '/Image.png',
     },
     {
-      id: 8,
+      id: "accessories8",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -63,7 +63,7 @@ const accessories = [
       
     },
     {
-      id: 9,
+      id: "accessories9",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,

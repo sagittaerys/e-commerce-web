@@ -1,6 +1,6 @@
 const recommendedProducts = [
   {
-      id: 1,
+      id: "recommended1",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -8,7 +8,7 @@ const recommendedProducts = [
       
     },
     {
-      id: 2,
+      id: "recommended2",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -16,7 +16,7 @@ const recommendedProducts = [
       
     },
     {
-      id: 3,
+      id: "recommended3",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -24,7 +24,7 @@ const recommendedProducts = [
       
     },
     {
-      id: 4,
+      id: "recommended4",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -32,7 +32,7 @@ const recommendedProducts = [
       
     },
     {
-      id: 5,
+      id: "recommended5",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -40,14 +40,14 @@ const recommendedProducts = [
       
     },
     {
-      id: 6,
+      id: "recommended6",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
       image: '/Image XVI.png',
     },
     {
-      id: 7,
+      id: "recommended7",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -55,7 +55,7 @@ const recommendedProducts = [
       
     },
     {
-      id: 8,
+      id: "recommended8",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,
@@ -63,7 +63,7 @@ const recommendedProducts = [
       
     },
     {
-      id: 9,
+      id: "recommended9",
       name: 'Name and Characteristics',
       discountedPrice: 74.95,
       actualPrice: 121.00,

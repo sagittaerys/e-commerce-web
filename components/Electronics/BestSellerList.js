@@ -10,7 +10,7 @@ export default function BestSellerList(){
     dots: true,
     infinite: true,
     speed: 370,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     dotsClass: "slick-dots custom-dots",
@@ -24,7 +24,7 @@ export default function BestSellerList(){
 
         
           
-          {BestSellers.map((Sellers, index) => ( <BestSellCard key={index} {...Sellers} /> ))}
+          {BestSellers.map((product) => ( <BestSellCard key={product.id} {...product} /> ))}
     
     </ Slider>
   )

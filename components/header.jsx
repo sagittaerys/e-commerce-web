@@ -15,7 +15,7 @@ import { MdOutlineQrCodeScanner } from "react-icons/md";
 import Link from "next/link";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header>
@@ -80,7 +80,7 @@ export default function Header() {
                 <p className="small-screen">ACCOUNT</p>
               </Link>
 
-              <Link href="/shop" className="unique-sm">
+              <Link href="/cart" className="unique-sm">
                 <MdOutlineShoppingBag className="w-[16px] h-[19px]" />
                 <p className="small-screen">CART</p>
               </Link>
@@ -144,7 +144,8 @@ export default function Header() {
 
               <Link href="/fashion">CLOTHING</Link>
               <Link href="/">SHOES</Link>
-              <Link href="/accessories">ACCESSORIES</Link>
+              <Link href="/all-products">ALL PRODUCTS
+              </Link>
               <Link href="/brands">BRANDS</Link>
             </ul>
 
