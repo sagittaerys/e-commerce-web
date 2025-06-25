@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import RecommendedList from "./recommended-list";
+import RecommendedList from "./Recommended/recommended-list";
 
 export default function Recommended() {
   // const scrollRef = useRef();

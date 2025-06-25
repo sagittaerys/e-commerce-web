@@ -3,7 +3,7 @@
 // import { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
-import TrendingList from "./trending-list";
+import TrendingList from "./Trending/trending-list";
 
 export default function Trending() {
  

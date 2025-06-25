@@ -6,7 +6,7 @@ export default function Summer() {
   return (
     <div className="container px-10 bg-[#F4F4F5] pb-[64px] pt-[64px]">
       <p className="section-header  pt-15  pb-3 text-[32px] font-semibold tracking-wide">
-        SPRING/SUMMER 2021
+        SPRING/SUMMER 2025
       </p>
 
       <div className="summer-card gap-[40px] flex text-[12px]">
@@ -32,26 +32,26 @@ export default function Summer() {
           </div>
           <div className="eco-content">
             <div className="card-details">
-              <span className="text-gray-600 text-[10px] mt-1">
-                BRAND/ TYPE
+              <span className="text-[#666] text-[10px] mt-1">
+                GreenStride / ECO
               </span>
-              <h3 className="text-[13px]">Name and Characteristics</h3>
+              <h3 className="font-bold text-[13px]">GreenStride Eco Sneakers</h3>
 
               <div className="colors items-center flex gap-2">
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#FFA724]"></button>
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#952AFF]"></button>
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#FF2A6A]"></button>
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#003DFF]"></button>
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#06AF87]"></button>
+                <button className="w-[15px] h-[15px] hover:border-[#F78125] border-gray-700 rounded-[100%] bg-[#FFA724]"></button>
+                <button className="w-[15px] h-[15px] hover:border-[#F78125] border-gray-700 rounded-[100%] bg-[#952AFF]"></button>
+                <button className="w-[15px] h-[15px] hover:border-[#F78125] border-gray-700 rounded-[100%] bg-[#FF2A6A]"></button>
+                <button className="w-[15px] h-[15px] hover:border-[#F78125] border-gray-700 rounded-[100%] bg-[#003DFF]"></button>
+                <button className="w-[15px] h-[15px] hover:border-[#F78125] border-gray-700 rounded-[100%] bg-[#06AF87]"></button>
 
                 {/* text */}
                 <p className="text-gray-600 text-[10px]"> +5 MORE </p>
               </div>
 
               <div className="flex">
-                <p className="font-bold text-[13px]">€ 74.96</p>
+                <p className="font-bold text-[13px]">$89.95</p>
                 <p className="pl-3 font-bold text-gray-600 line-through italic">
-                  € 121.00
+                  $139.00
                 </p>
               </div>
               <div className="ratings items-center flex pt-1">
@@ -68,9 +68,7 @@ export default function Summer() {
 
         {/* Next From Here */}
         <div className="card-trending flex relative flex-col w-[180px] h-[276] text-[12px]">
-          <button className="heart-icon rounded-md absolute z-10 pt-2 ml-34 bg-white p-1.5 mt-1 ">
-            <FaRegHeart />
-          </button>
+          
 
           <div className="card-image">
             <Image
@@ -82,13 +80,13 @@ export default function Summer() {
           </div>
 
           <div className="card-details">
-            <span className="text-gray-600 text-[10px] mt-1">BRAND/ TYPE</span>
-            <h3>Name and Characteristics</h3>
+            <span className="text-gray-600 text-[10px] mt-1">UrbanVault / Classic Series</span>
+            <h3 className="font-bold">UrbanVault Street Flex Sneakers</h3>
 
             <div className="flex">
-              <p className="font-bold">€ 74.95</p>
+              <p className="font-bold">$ 74.95</p>
               <p className="pl-3 font-bold text-gray-600 line-through italic">
-                € 121.00
+                $ 121.00
               </p>
             </div>
             <div className="ratings items-center flex pt-1">
@@ -104,9 +102,7 @@ export default function Summer() {
 
         {/* Next From Here */}
         <div className="card-trending flex relative flex-col w-[180px] h-[276] text-[12px]">
-          <button className="heart-icon rounded-md absolute z-10 pt-2 ml-34 bg-white p-1.5 mt-1 ">
-            <FaRegHeart />
-          </button>
+          
 
           <div className="card-image">
             <Image
@@ -118,13 +114,13 @@ export default function Summer() {
           </div>
 
           <div className="card-details">
-            <span className="text-gray-600 text-[10px] mt-1">BRAND/ TYPE</span>
-            <h3>Name and Characteristics</h3>
+            <span className="text-[#666] text-[10px] mt-1">StrideMode / Originals</span>
+            <h3 className="font-bold">StrideMode Retro Court Sneakers</h3>
 
             <div className="flex">
-              <p className="font-bold">€ 74.95</p>
+              <p className="font-bold">$ 74.95</p>
               <p className="pl-3 font-bold text-gray-600 line-through italic">
-                € 121.00
+                $ 121.00
               </p>
             </div>
             <div className="ratings items-center flex pt-1">
@@ -160,26 +156,26 @@ export default function Summer() {
           </div>
           <div className="eco-content">
             <div className="card-details">
-              <span className="text-gray-600 text-[10px] mt-1">
-                BRAND/ TYPE
+              <span className="text-[#666] text-[10px] mt-1">
+                EarthRoot / ECO
               </span>
-              <h3 className="text-[13px]">Name and Characteristics</h3>
+              <h3 className="font-bold text-[13px]">EarthRoot BioWalk Runners</h3>
 
               <div className="colors items-center flex gap-2">
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#FFA724]"></button>
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#952AFF]"></button>
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#FF2A6A]"></button>
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#003DFF]"></button>
-                <button className="w-[15px] h-[15px] border-gray-700 rounded-[100%] bg-[#06AF87]"></button>
+                <button className="w-[15px] hover:border-[#F78125] h-[15px] border-gray-700 rounded-[100%] bg-[#FFA724]"></button>
+                <button className="w-[15px] h-[15px] hover:border-[#F78125] border-gray-700 rounded-[100%] bg-[#952AFF]"></button>
+                <button className="w-[15px] h-[15px] hover:border-[#F78125] border-gray-700 rounded-[100%] bg-[#FF2A6A]"></button>
+                <button className="w-[15px] h-[15px] hover:border-[#F78125] hover:border border-gray-700 rounded-[100%] bg-[#003DFF]"></button>
+                <button className="w-[15px] h-[15px] hover:border-[#F78125] border-gray-700 rounded-[100%] bg-[#06AF87]"></button>
 
                 {/* text */}
                 <p className="text-gray-600 text-[10px]"> +5 MORE </p>
               </div>
 
               <div className="flex">
-                <p className="font-bold text-[13px]">€ 74.96</p>
+                <p className="font-bold text-[13px]">$ 94.50</p>
                 <p className="pl-3 font-bold text-gray-600 line-through italic">
-                  € 121.00
+                 $ 149.00
                 </p>
               </div>
               <div className="ratings items-center flex pt-1">

@@ -1,9 +1,9 @@
 "use client";
 
 
-import { useFavorites } from "./FavoritesContext";
+import { useFavorites } from "../FavoritesContext";
 
-import { useCart } from "./Cart/cartContext";
+import { useCart } from "../Cart/cartContext";
 
 
 import { toast } from "react-toastify";

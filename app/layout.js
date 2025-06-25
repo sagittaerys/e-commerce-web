@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "../components/footer";
+import Header from "@/components/Reuseable Components/header";
+import Footer from "../components/Reuseable Components/footer";
 import { FavoritesProvider } from "@/components/FavoritesContext";
 import { CartProvider } from "@/components/Cart/cartContext";
 

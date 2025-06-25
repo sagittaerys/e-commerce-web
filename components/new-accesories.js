@@ -2,10 +2,10 @@
 
 import { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import AccessoriesList from "./accessories-list";
+import AccessoriesList from "./Accessories/accessories-list";
 import React from "react";
 import Slider from "react-slick";
-import accessories from "./accessories";
+import accessories from "./Accessories/accessories";
 
 
 export default function NewAccessories() {

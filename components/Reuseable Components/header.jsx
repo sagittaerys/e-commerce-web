@@ -1,11 +1,12 @@
 "use client";
-
-import { useFavorites } from "./FavoritesContext";
+import { useFavorites } from "../FavoritesContext";
+// import { useFavorites } from "./FavoritesContext";
 import Image from "next/image";
 import { MdOutlineHeadsetMic } from "react-icons/md";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useCart } from "./Cart/cartContext";
+// import { useCart } from "./Cart/cartContext";
+import { useCart } from "../Cart/cartContext";
 import { MdAddLocationAlt } from "react-icons/md";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
