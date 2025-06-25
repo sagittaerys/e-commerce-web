@@ -1,7 +1,7 @@
 "use client";
 import { useCart } from "@/components/Cart/cartContext";
 import Image from "next/image";
-
+// import { useCart } from "@/components/Cart/cartContext";
 
 
 export default function CartPage() {
@@ -9,6 +9,7 @@ export default function CartPage() {
 
   // +1
 
+  
   
 
   const { cart, removeFromCart, increaseQuantity, reduceQuantity, getTotalAmount } = useCart();
@@ -39,7 +40,7 @@ export default function CartPage() {
       ) : (
         cart.map((item) => (
           // Individual Card
-          <div className="flex border border-[#666] rounded-xl my-5 gap-5 items-center" key={item.id}>
+          <div className="flex shadow-xl rounded-xl my-5 gap-5 items-center" key={item.id}>
             <div className="cart-image w-[20%]">
               <Image
                 src={item.image}

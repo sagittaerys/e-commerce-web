@@ -76,7 +76,7 @@ export default function Electronics() {
           <div className="bg-[url('/slider6.png')]  bg-cover bg-left rounded-xl w-[308.98] h-[215px]">
             <div className="py-4 flex flex-col items-end">
               <div className="max-w-[118.81px]">
-                <span className="text-[12px] mt-3 text-[#23263b] font-bold">XOMIA</span>
+                <span className="text-[12px] mt-3  font-bold">XOMIA</span>
                 <p className="text-[16px] mt-3 text-[#23263b] font-bold ">
                   Sport Water Resistant Watch
                 </p>

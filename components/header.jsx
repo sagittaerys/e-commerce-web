@@ -1,12 +1,13 @@
 "use client";
 
+import { useFavorites } from "./FavoritesContext";
 import Image from "next/image";
 import { MdOutlineHeadsetMic } from "react-icons/md";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import { useCart } from "./Cart/cartContext";
 import { MdAddLocationAlt } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
@@ -17,6 +18,24 @@ import Link from "next/link";
 export default function Header() {
   // const [isOpen, setIsOpen] = useState(false);
 
+  //to make the color change
+  //   const onclickStyle = (e) => {
+  //   e.target.style.color = "red";
+  // };
+
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const toggleHeart = () => {
+    setIsFavorite(!isFavorite);
+  };
+
+
+  //calling out the favorites from the useFavorites.
+  const {favorites} = useFavorites();
+  // calling out the cart ffrom useCart
+
+  const {cart} = useCart();
+
   return (
     <header>
       <div className="xs-default text-center text-white py-1.5">
@@ -25,20 +44,19 @@ export default function Header() {
 
       <div className="container h-[147.22px]" id="small-height">
         <div className="main-header flex justify-between px-10 py-4">
-           <Link href= "/">
-           <div className="flex gap-2 items-center">
-          <Image
-            src="/sage-centaur.png"
-            className="logo"
-            alt="logo"
-            width={40.47}
-            height={35.22}
-          />
-          <h1 className="logo-text">Sagittaerean Mall</h1>
-           </div>
-          {/* Image Covered */}
-           
-           </Link>
+          <Link href="/">
+            <div className="flex gap-2 items-center">
+              <Image
+                src="/sage-centaur.png"
+                className="logo"
+                alt="logo"
+                width={40.47}
+                height={35.22}
+              />
+              <h1 className="logo-text">Sagittaerean Mall</h1>
+            </div>
+            {/* Image Covered */}
+          </Link>
 
           {/* {isOpen && (
           <div className="sm:hidden bg-white px-6 py-4 shadow-md">
@@ -62,16 +80,32 @@ export default function Header() {
                 <p className="icon-text">Support</p>
               </Link>
 
-              <Link className="flex unique-sm items-center gap-1" href="/find-store">
+              <Link
+                className="flex unique-sm items-center gap-1"
+                href="/find-store"
+              >
                 <MdAddLocationAlt className="w-[16px] h-[19px] text-gray-600" />
                 <p className="icon-text">Find a store</p>
                 <p className="small-screen">STORE</p>
               </Link>
             </ul>
 
+            {/* className="w-[16px] h-[19px]" */}
+
             <ul className="flex gap-4">
-              <Link href="/favorites" className="icon-bl">
-                <FaRegHeart className="w-[16px] h-[19px]" />
+              <Link onClick={toggleHeart} href="/favorites" className="icon-bl relative">
+                {isFavorite ? (
+                  <FaHeart className="text-red-500 w-[16px] h-[19px]" />
+                ) : (
+                  <FaRegHeart className="w-[16px] h-[19px]  hover:text-red-500" />
+                )}
+
+                {/* Number Length */}
+                {favorites.length > 0 && (
+                  <span className="absolute bottom-2.5 ml-2.5 bg-[#23263b] text-white text-[9px] px-1.5 py-0.5 rounded-full">
+                    {favorites.length}
+                  </span>
+                )}
               </Link>
 
               <Link href="/account" className="unique-sm">
@@ -80,9 +114,20 @@ export default function Header() {
                 <p className="small-screen">ACCOUNT</p>
               </Link>
 
+
               <Link href="/cart" className="unique-sm">
-                <MdOutlineShoppingBag className="w-[16px] h-[19px]" />
+                
+               <div className="relative">
+                  <MdOutlineShoppingBag className="w-[16px] h-[19px]" />
+
+                {/* Number Length */}
+                {cart.length > 0 && (
+                  <span className="absolute bottom-2.5 ml-2 bg-[#23263b] text-white text-[9px] px-1.5 py-0.5 rounded-full">
+                    {cart.length}
+                  </span>
+                )}
                 <p className="small-screen">CART</p>
+                </div>   
               </Link>
             </ul>
           </div>
@@ -144,8 +189,7 @@ export default function Header() {
 
               <Link href="/fashion">CLOTHING</Link>
               <Link href="/">SHOES</Link>
-              <Link href="/all-products">ALL PRODUCTS
-              </Link>
+              <Link href="/all-products">ALL PRODUCTS</Link>
               <Link href="/brands">BRANDS</Link>
             </ul>
 

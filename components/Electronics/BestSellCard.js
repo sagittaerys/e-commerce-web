@@ -24,10 +24,35 @@ export default function BestSellCard({
 
   //Add to cart here
 
-  const { addToCart } = useCart();
+  const { cart, addToCart } = useCart();
 
   const percentageValue = () => {
     return actualPrice * 0.25;
+  };
+
+  // The Cart
+  const handleAddToCart = () => {
+    const alreadyInCart = cart.some((item) => item.id === id);
+
+    if (alreadyInCart) {
+      toast.info(`${name} is already in your cart.`);
+    } else {
+      addToCart({ id, name, discountedPrice, actualPrice, image, brand });
+      toast.success(`${name} added to cart!`);
+    }
+  };
+
+  // The Favorite
+
+  const handleFavorite = () => {
+    const alreadyInFavorite = cart.some((item) => item.id === id);
+
+    if (alreadyInFavorite) {
+      toast.info(`${name} is already in favorites!`);
+    } else {
+      toggleFavorite(id);
+      toast.success("Added to favorites!");
+    }
   };
 
   return (
@@ -51,8 +76,14 @@ export default function BestSellCard({
           <button
             className="heart-icon border-2 border-[#23263B] m-2 p-1 rounded-full top-[2%] absolute ml-37 z-10 bg-white transition-transform duration-300 ease-in-out transform hover:scale-105"
             onClick={() => {
+              const isAlreadyFavorite = favorites.includes(id); // check before toggling => new variable created
               toggleFavorite(id);
-              toast.success("Added to favorites!");
+
+              if (isAlreadyFavorite) {
+                toast.info(`${name} removed from favorites`);
+              } else {
+                toast.success(`${name} added to favorites`);
+              }
             }}
           >
             {isFavorite ? (
@@ -95,10 +126,7 @@ export default function BestSellCard({
       <div className="px-2 my-3 gap-5 flex">
         {/* Add To Cart Btn */}
         <button
-          onClick={() => {
-            addToCart({ id, name, discountedPrice, actualPrice, image, brand });
-            toast.success(`${name} added to cart!`);
-          }}
+          onClick={handleAddToCart}
           className="bg-[#F78125] text-white text-[12px] p-2 rounded-xl"
         >
           Add To Cart
