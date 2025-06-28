@@ -39,14 +39,29 @@ const handleSubmit = async (e) => {
       body: JSON.stringify({ email, password }),
     });
 
-    const data = await res.json();
+    const data = await res.json(); // for storing tokens  
 
     if (!res.ok) {
       throw new Error(data.message || "Login failed");
     }
 
+
+    // if successful
+
+    if (res.ok) {
+  // Save token to localStorage
+  localStorage.setItem("token", data.token);
+
+  // Optional: Save user ID or email if returned
+  localStorage.setItem("user", JSON.stringify(data.user));
+
+  // Redirect to account/dashboard page
+  window.location.href = "/dashboard"; // or "/dashboard"
+  }
+
     // success – handle token, redirect, etc.
     console.log("Login successful:", data);
+    
     // e.g. save token: localStorage.setItem("token", data.token);
     // navigate to dashboard: router.push("/dashboard");
   } catch (err) {
