@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { API_BASE_URL } from "@/lib/api";
 
 export default function LogInPage(){
 
@@ -10,9 +10,11 @@ const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [error, setError] = useState("");
 
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
    e.preventDefault();
-   console.log({email, password}) // battle for another day (backend)
+
+
+  //  console.log({email, password}) // battle for another day (backend)
 
    //Input Validation Genesis
     if (!email){
@@ -23,9 +25,36 @@ const handleSubmit = (e) => {
      setError('Password is required!');
      return;
     }
+
    
    setError('');
-   console.log('Olamilekan Is The One True Imperial Sage!');
+
+    //try
+     try {
+    const res = await fetch(`${API_BASE_URL}/api/auth/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.message || "Login failed");
+    }
+
+    // success – handle token, redirect, etc.
+    console.log("Login successful:", data);
+    // e.g. save token: localStorage.setItem("token", data.token);
+    // navigate to dashboard: router.push("/dashboard");
+  } catch (err) {
+    setError(err.message);
+  }
+
+
+  //  console.log('Olamilekan Is The One True Imperial Sage!');
   } 
 
 
