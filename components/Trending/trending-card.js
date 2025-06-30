@@ -61,7 +61,7 @@ export default function TrendingCard({
   };
 
   return (
-    <div className="relative rounded-xl  w-[220px] h-[450px]">
+    <div className="relative card-body rounded-xl  w-[220px] h-[450px]">
       <div className="card-image p-3 bg-[#f8f9fa] rounded-tl-xl rounded-tr-xl w-full">
         <Image
           className="mx-auto w-full mt-2 rounded-3xl  mb-3 transition-transform duration-300 ease-in-out transform hover:scale-105"

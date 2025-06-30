@@ -30,15 +30,14 @@ export default function Header() {
     setIsFavorite(!isFavorite);
   };
 
-
   //calling out the favorites from the useFavorites.
-  const {favorites} = useFavorites();
+  const { favorites } = useFavorites();
   // calling out the cart ffrom useCart
 
-  const {cart} = useCart();
+  const { cart } = useCart();
 
   return (
-    <header>
+    <header className="header">
       <div className="xs-default text-center text-white py-1.5">
         <span>20% Off Code: SAGITTAERYS29 - Terms Apply</span>
       </div>
@@ -75,6 +74,7 @@ export default function Header() {
         )} */}
 
           <div className="small-style flex items-center gap-10 w-[50%] justify-between">
+            {/* blocked on small screens */}
             <ul className="head-icons flex mx-5 gap-5 pl-10">
               <Link className="icon-bl flex items-center gap-1" href="/support">
                 <MdOutlineHeadsetMic className="w-[16px] h-[19px]text-gray-600" />
@@ -87,18 +87,22 @@ export default function Header() {
               >
                 <MdAddLocationAlt className="w-[16px] h-[19px] text-gray-600" />
                 <p className="icon-text">Find a store</p>
-                <p className="small-screen">STORE</p>
+                {/* <p className="small-screen">STORE</p> */}
               </Link>
             </ul>
 
             {/* className="w-[16px] h-[19px]" */}
 
-            <ul className="flex gap-4">
-              <Link onClick={toggleHeart} href="/favorites" className="icon-bl relative">
+            <ul className="sm-allowed flex gap-4">
+              <Link
+                onClick={toggleHeart}
+                href="/favorites"
+                className="icon-bl relative"
+              >
                 {isFavorite ? (
-                  <FaHeart className="text-red-500 w-[16px] h-[19px]" />
+                  <FaHeart className="icon-size text-red-500 icon-size w-[16px] h-[19px]" />
                 ) : (
-                  <FaRegHeart className="w-[16px] h-[19px]  hover:text-red-500" />
+                  <FaRegHeart className="icon-size w-[16px] h-[19px]  hover:text-red-500" />
                 )}
 
                 {/* Number Length */}
@@ -110,25 +114,23 @@ export default function Header() {
               </Link>
 
               <Link href="/account" className="unique-sm">
-                <IoPersonOutline className="w-[16px] h-[19px]" />
+                <IoPersonOutline className="icon-size w-[16px] h-[19px]" />
 
-                <p className="small-screen">ACCOUNT</p>
+                {/* <p className="small-screen">ACCOUNT</p> */}
               </Link>
 
-
               <Link href="/cart" className="unique-sm">
-                
-               <div className="relative">
-                  <MdOutlineShoppingBag className="w-[16px] h-[19px]" />
+                <div className="relative">
+                  <MdOutlineShoppingBag className="icon-size w-[16px] h-[19px]" />
 
-                {/* Number Length */}
-                {cart.length > 0 && (
-                  <span className="absolute bottom-2.5 ml-2 bg-[#23263b] text-white text-[9px] px-1.5 py-0.5 rounded-full">
-                    {cart.length}
-                  </span>
-                )}
-                <p className="small-screen">CART</p>
-                </div>   
+                  {/* Number Length */}
+                  {cart.length > 0 && (
+                    <span className="absolute bottom-2.5 ml-2 bg-[#23263b] text-white text-[9px] px-1.5 py-0.5 rounded-full">
+                      {cart.length}
+                    </span>
+                  )}
+                  <p className="small-screen">CART</p>
+                </div>
               </Link>
             </ul>
           </div>
@@ -136,10 +138,8 @@ export default function Header() {
         {/* Categories -- Blocked out thia for small screens. This code is becoming a maze.... */}
 
         <div className="section  text-[14px] px-10">
-          <ul className="flex gap-4">
-            <Link className="font-bold" href="/fashion">
-              FASHION
-            </Link>
+          <ul className="mall-categories flex gap-4">
+            <Link href="/fashion">FASHION</Link>
 
             <Link href="/electronics">ELECTRONICS</Link>
 
@@ -148,50 +148,49 @@ export default function Header() {
           <hr className="line border-gray-600" />
         </div>
 
-        <div></div>
-        {/* Best Position */}
-        {/* <div className="flex p-3 h-[48px]">
-            <div
-                className="flex item-center h-[48px] w-[65px] flex-row gap-3 cursor-pointer sm:hidden"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                <GiHamburgerMenu className="" /> 
-                <span className="text-[10px]">MENU</span>
-              </div>
-
-              {/* Small Screen Input */}
-        {/* <div className="input-field flex items-center border border-gray-400  px-3 py-1 w-full max-w-sm bg-white"> */}
-        {/* Search Icon */}
-        {/* <IoIosSearch className="text-gray-500 text-xl mr-2" /> */}
-
-        {/* Input Field */}
-        {/* <input
-              type="text"
-              placeholder="Search products, articles, faq, ..."
-              className="flex-1 outline-none text-sm text-gray-800 placeholder-gray-500"
-            /> */}
-
-        {/* Right Icons */}
-        {/* <div className="flex items-center gap-3 border-l pl-3 ml-3">
-              <IoMicOutline className="text-lg text-gray-600 cursor-pointer" />
-
-              <MdOutlineQrCodeScanner className="text-lg text-gray-600 cursor-pointer" /> */}
-        {/* </div>
-          </div> */}
-        {/* </div>  */}
-
         {/* Input */}
         <div className="third">
           <div className="search pt-2 flex px-10  justify-between items-center w-full">
-            <ul className="flex gap-4 font-base">
+            <ul className="btn-list-xl flex gap-4 font-base">
               <Link href="/sale">SALE</Link>
-
               <Link href="#new-arrivals">NEW IN</Link>
-
-              <Link href="/fashion">CLOTHING</Link>
               <Link href="/">SHOES</Link>
               <Link href="/all-products">ALL PRODUCTS</Link>
               <Link href="/brands">BRANDS</Link>
+            </ul>
+
+            {/* btns */}
+
+            <ul className="btn-categories my-2 gap-3 font-base">
+              <Link href="/sale">
+                <button className="px-2 pointer text-[10px] py-2 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                  SALE
+                </button>
+              </Link>
+
+              <Link href="#new-arrivals">
+                <button className="px-2 pointer text-[10px] py-2 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                  NEW IN
+                </button>
+              </Link>
+
+              <Link href="/">
+                <button className="px-2 pointer py-2 text-[10px] bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                  SHOES
+                </button>
+              </Link>
+
+              <Link href="/all-products">
+                <button className="px-2 pointer py-2 text-[10px] bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                  ALL PRODUCTS
+                </button>
+              </Link>
+
+              <Link href="/brands">
+                <button className="px-2 pointer text-[10px] py-2 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                  BRANDS
+                </button>
+              </Link>
             </ul>
 
             {/* Recalibration needed */}

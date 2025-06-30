@@ -102,6 +102,13 @@ body {
 .small-screen{
   display: none;
 }
+.btn-categories{
+  display: none;
+}
+
+.styx{
+  display: none;
+}
 
 @media screen and (min-width: 1400px) {
   .container {
@@ -112,8 +119,130 @@ body {
 
 /* Responsiveness */
 
-/* Phones */
+/* Tablet Landscape and Below (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  /* Adjust layout for tablets or small laptops */
 
-@media (max-width: 376px) {
-   
+
 }
+
+/* Tablet Portrait and Below (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Stack elements, reduce padding/margins */
+
+
+}
+
+/* Large Phones (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  /* Adjust font sizes, image sizes, hide nav links */
+
+
+}
+
+/* Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  /* One-column layout, mobile menu, full-width inputs */
+
+body{
+  overflow-x: hidden;
+}
+
+
+  /* Header */
+  .header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  .banner-height{
+    padding-top: 180px;
+  }
+
+  .head-icons{
+    display: none;
+  }
+
+  .main-header{
+    padding: 5px 14px;
+  }
+
+  .sm-allowed{
+    margin-left: 96px;
+  }
+
+  .icon-size {
+    width: 19px;
+    height: 21px;
+  }
+
+  .mall-categories, .line{
+    display: none;
+  }
+
+  .search{
+    flex-direction: column-reverse;
+    padding: 5px 14px;
+  }
+
+  .input-field{
+    width: 365px;
+    padding: 20px, 5px;
+  }
+
+  .btn-list-xl{
+    display: none;
+  }
+
+  .btn-categories{
+    display: contents;
+    display: flex;
+
+  }
+
+  /* Banner */
+  .banner-content{
+    padding: 0 14px;
+  }
+
+  .banner-content h1{
+    font-size: 45px;
+  }
+  .banner-content h3{
+    font-size: 17px;
+  }
+
+
+  /* apocrypha styx */
+
+  .styx{
+    display: contents;
+    /* padding: 5px 50px; */
+  }
+
+  .section-header{
+    font-size: 17px;
+  }
+
+  .styx .kids{
+    justify-content: center;
+  }
+
+  /* trending */
+
+  .trending-main{
+    padding: 5px 14px;
+  }
+
+  .card-body{
+
+  }
+
+  
+
+}
+
+
