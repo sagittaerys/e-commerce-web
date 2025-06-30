@@ -10,6 +10,8 @@ import { FaHeart } from "react-icons/fa6";
 import Link from "next/link";
 // import BestSellers from "./BestSellers.js";
 
+import { API_BASE_URL } from "@/lib/api";
+
 export default function BestSellCard({
   name,
   actualPrice,
@@ -31,16 +33,53 @@ export default function BestSellCard({
   };
 
   // The Cart
-  const handleAddToCart = () => {
-    const alreadyInCart = cart.some((item) => item.id === id);
+  const handleAddToCart = async () => {
+  const alreadyInCart = cart.some((item) => item.id === id);
 
-    if (alreadyInCart) {
-      toast.info(`${name} is already in your cart.`);
-    } else {
-      addToCart({ id, name, discountedPrice, actualPrice, image, brand });
-      toast.success(`${name} added to cart!`);
+  if (alreadyInCart) {
+    toast.info(`${name} is already in your cart.`);
+    return;
+  }
+
+  // Add to local cart state
+  addToCart({ id, name, discountedPrice, actualPrice, image, brand });
+  toast.success(`${name} added to cart!`);
+
+  // token signifying saving to local storage
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    const cartItem = {
+      productId: id,
+      name,
+      image,
+      quantity: 1,
+      price: discountedPrice,
+      brand,
+    };
+
+    try {
+      const res = await fetch(`${API_BASE_URL}/api/cart`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(cartItem),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.message || "Failed to save cart");
+
+      console.log("Cart item saved to backend:", data.cart);
+    } catch (err) {
+      console.error("Error saving cart to backend:", err.message);
+      toast.error("Error saving cart online.");
     }
-  };
+  }
+};
+
 
   // The Favorite
 

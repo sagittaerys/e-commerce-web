@@ -58,6 +58,11 @@ const reduceQuantity = (id) => {
   );
 };
 
+const initializeCart = (items) => {
+  setCart(items); // Set cart state directly
+};
+
+
   // Optional: remove
   const removeFromCart = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
@@ -73,7 +78,7 @@ const reduceQuantity = (id) => {
 
   // Step 4: Provide values
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, increaseQuantity, reduceQuantity, getTotalAmount }}>
+    <CartContext.Provider value={{ cart, addToCart, initializeCart, removeFromCart, increaseQuantity, reduceQuantity, getTotalAmount }}>
       {children}
     </CartContext.Provider>
   );

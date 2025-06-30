@@ -2,20 +2,56 @@
 import { useCart } from "@/components/Cart/cartContext";
 import Image from "next/image";
 // import { useCart } from "@/components/Cart/cartContext";
+import { useEffect } from "react";
+import { API_BASE_URL } from "@/lib/api";
+import { useRouter } from "next/navigation";
 
 
 export default function CartPage() {
+
+
+
+  
+  
+  
   // Independent Functions
-
+  
   // +1
-
   
   
-
-  const { cart, removeFromCart, increaseQuantity, reduceQuantity, getTotalAmount } = useCart();
-
   
+  
+  const { cart, removeFromCart, increaseQuantity, reduceQuantity, getTotalAmount, initializeCart } = useCart();
+  
+  const router = useRouter();
+  
+  useEffect(() => {
+    const token = localStorage.getItem("token");
 
+    if (!token) {
+      router.push("/login");
+      return;
+    }
+
+    const fetchCart = async () => {
+      try {
+        const res = await fetch(`${API_BASE_URL}/api/cart`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        const data = await res.json();
+        initializeCart(data); // ✅ Fill the cart context
+      } catch (err) {
+        console.error("Error fetching cart:", err.message);
+      }
+    };
+
+    fetchCart();
+  }, []);
+  
+  
   return (
     <div className="container p-10">
       <div className="flex justify-between">

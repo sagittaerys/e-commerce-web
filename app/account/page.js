@@ -1,7 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { API_BASE_URL } from "@/lib/api";
+
 
 export default function UserAccount() {
 const [name, setName] = useState("");
@@ -10,7 +13,17 @@ const [password, setPassword] = useState("");
 const [confirmPassword, setConfirmPassword] = useState("");
 const [error, setError] = useState("");
 
-const handleSubmit = (e) => {
+const router = useRouter(); // variable declared
+
+useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      router.push("/dashboard");
+    }
+  }, []);
+
+
+const handleSubmit = async (e)  => {
    e.preventDefault();
    console.log({name, email, password, confirmPassword}) // battle for another day (backend)
 
@@ -36,7 +49,54 @@ const handleSubmit = (e) => {
     }
    
    setError('');
-   console.log('Olamilekan Is The One True Imperial Sage!');
+
+    //try catch statement
+    try {
+        const res = await fetch(`${API_BASE_URL}/api/auth/register`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, password }),
+        });
+    
+        const data = await res.json(); // for storing tokens  
+    
+        if (!res.ok) {
+          throw new Error(data.message || "Registration failed");
+        }
+    
+    
+        // if successful
+    
+        if (res.ok) {
+      // Save token to localStorage
+        console.log("Saving token and redirecting...");
+    
+      localStorage.setItem("token", data.token);
+    
+      // Optional: Save user ID or email if returned
+      localStorage.setItem("user", JSON.stringify(data.user));
+    
+      // Redirect to account/dashboard page
+      router.push("/");
+     // or "/dashboard"
+      }
+    
+        // success – handle token, redirect, etc.
+        console.log("Registration successful:", data);
+        
+        // e.g. save token: localStorage.setItem("token", data.token);
+        // navigate to dashboard: router.push("/dashboard");
+      } catch (err) {
+        setError(err.message);
+      }
+    
+    
+     
+      
+
+  //  console.log('Olamilekan Is The One True Imperial Sage!');
 } 
 
 

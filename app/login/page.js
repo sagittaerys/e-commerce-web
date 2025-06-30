@@ -1,15 +1,25 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { API_BASE_URL } from "@/lib/api";
+import { useRouter } from "next/navigation"; // ✅ CORRECT
+
 
 export default function LogInPage(){
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const router = useRouter();
 
-const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
-const [error, setError] = useState("");
-
+   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      router.push("/dashboard");
+    }
+  }, []);
+  
 const handleSubmit = async (e) => {
    e.preventDefault();
 
@@ -50,13 +60,16 @@ const handleSubmit = async (e) => {
 
     if (res.ok) {
   // Save token to localStorage
+    console.log("Saving token and redirecting...");
+
   localStorage.setItem("token", data.token);
 
   // Optional: Save user ID or email if returned
   localStorage.setItem("user", JSON.stringify(data.user));
 
   // Redirect to account/dashboard page
-  window.location.href = "/dashboard"; // or "/dashboard"
+  router.push("/dashboard");
+ // or "/dashboard"
   }
 
     // success – handle token, redirect, etc.
