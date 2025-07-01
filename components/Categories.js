@@ -16,7 +16,7 @@ export default function Categories() {
           <div className="electronics">
           <div className="image">
                <div>
-                <Image src= "/prod9.png" width={110} height={130} alt="electronics" />
+                <Image className="categories-image" src= "/prod9.png" width={110} height={130} alt="electronics" />
               </div>
               <div className="text-center  text">
                 <h3 className="font-bold text-[#23263b] my-2 pt-2">Electronics</h3>
@@ -30,7 +30,7 @@ export default function Categories() {
         <Link className="hover:border-2 rounded-md hover:border-[#23263b]" href= "/fashion">
           <div className="fashion">
              <div>
-              <Image src= "/Image III.png" width={110} height={136} alt="fashion" />
+              <Image className="categories-image" src= "/Image III.png" width={110} height={136} alt="fashion" />
               
           </div>
              <div className="text-center text">
@@ -42,7 +42,7 @@ export default function Categories() {
         <Link className="hover:border-2 rounded-md hover:border-[#23263b]" href= "/food">
           <div className="food">
           <div>
-              <Image src= "/Food III.png" width={110} height={130} alt="food" />
+              <Image className="categories-image" src= "/Food III.png" width={110} height={130} alt="food" />
           </div>
              <div className="text-center text">
                 <h3 className="font-bold text-[#23263b] my-2 pt-2">Food</h3>

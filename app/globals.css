@@ -146,6 +146,7 @@ body {
 
 body{
   overflow-x: hidden;
+  max-width: 480px;
 }
 
 
@@ -156,7 +157,8 @@ body{
     left: 0;
     background-color: white;
     z-index: 1000;
-    width: 100%;
+    width: 480px;
+    /* margin: 0; */
   }
 
   .banner-height{
@@ -187,6 +189,7 @@ body{
   .search{
     flex-direction: column-reverse;
     padding: 5px 14px;
+    /* justify-content */
   }
 
   .input-field{
@@ -230,6 +233,12 @@ body{
 
   .styx .kids{
     justify-content: center;
+  }
+
+  .categories-image{
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
   }
 
   /* trending */
