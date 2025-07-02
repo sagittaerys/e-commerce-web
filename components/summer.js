@@ -4,7 +4,7 @@ import { IoMdStar } from "react-icons/io";
 
 export default function Summer() {
   return (
-    <div className="container px-10 bg-[#F4F4F5] pb-[64px] pt-[64px]">
+    <div className="container summer-container px-10 bg-[#F4F4F5] pb-[64px] pt-[64px]">
       <p className="section-header  pt-15  pb-3 text-[32px] font-semibold tracking-wide">
         SPRING/SUMMER 2025
       </p>
@@ -66,7 +66,9 @@ export default function Summer() {
           </div>
         </div>
 
-        {/* Next From Here */}
+        <div className="flex gap-6">
+
+           {/* Next From Here */}
         <div className="card-trending flex relative flex-col w-[180px] h-[276] text-[12px]">
           
 
@@ -99,6 +101,8 @@ export default function Summer() {
             </div>
           </div>
         </div>
+
+        
 
         {/* Next From Here */}
         <div className="card-trending flex relative flex-col w-[180px] h-[276] text-[12px]">
@@ -134,6 +138,10 @@ export default function Summer() {
           </div>
         </div>
 
+          
+        </div>
+
+       
         {/* Final */}
         <div className="huge relative">
           <div className="flex flex-col">

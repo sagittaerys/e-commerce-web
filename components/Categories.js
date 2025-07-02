@@ -30,7 +30,7 @@ export default function Categories() {
         <Link className="hover:border-2 rounded-md hover:border-[#23263b]" href= "/fashion">
           <div className="fashion">
              <div>
-              <Image className="categories-image" src= "/Image III.png" width={110} height={136} alt="fashion" />
+              <Image className="categories-image" src= "/Image III.png" width={110} height={130} alt="fashion" />
               
           </div>
              <div className="text-center text">

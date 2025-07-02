@@ -157,8 +157,6 @@ body{
     left: 0;
     background-color: white;
     z-index: 1000;
-    width: 480px;
-    /* margin: 0; */
   }
 
   .banner-height{
@@ -189,7 +187,6 @@ body{
   .search{
     flex-direction: column-reverse;
     padding: 5px 14px;
-    /* justify-content */
   }
 
   .input-field{
@@ -236,21 +233,86 @@ body{
   }
 
   .categories-image{
-    width: 100%;
-    aspect-ratio: 4/3;
+    width: 110px;
+    aspect-ratio: 2/4;
     object-fit: cover;
+    /* I'm the best.... */
   }
 
   /* trending */
 
-  .trending-main{
+  .trending-main, .recommended-container, .new-container{
+    padding: 5px 14px;
+    margin-top: 20px ;
+  }
+
+  .summer-container{
     padding: 5px 14px;
   }
 
-  .card-body{
-
+  .about-you{
+    padding: 5px 14px;
+    /* margin-top: 30px; */
+    align-content: center;
   }
 
+  .about-text{
+    max-width: 375px;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .about-heading{
+    font-size: 20px;
+  }
+
+  /* spring and summer */
+  .summer-card{
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  
+
+  .eco-image{
+    width: 362px;
+    height: 200px;
+  }
+
+  /* footer */
+  .footer-container{
+    flex-direction: column;
+    padding: 5px 14px;
+  }
+
+  .footer-division{
+    width: 100%;
+  }
+
+  .footer-text{
+    max-width: 100%;
+  }
+
+  .handles{
+    justify-content: space-between;
+  }
+
+  .footer-list{
+    width: 100%;
+    margin: 15px 5px;
+  }
+
+  .footer-newsletter{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .payment{
+    padding: 10px 14px;
+  }
+
+  .payment p{
+      font-size: 9px;
+  }
   
 
 }

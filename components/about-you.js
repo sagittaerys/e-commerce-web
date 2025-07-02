@@ -5,12 +5,12 @@ export default function AboutYou() {
   return (
     <div className="container  h-[468px] bg-[white]">
       <div className="layout relative">
-        <div className="bg-[#706C63] absolute px-10 py-10 text-white h-[370px] w-[981px]">
-          <h3 className="text-4xl pb-2 pt-3 font-semibold tracking-wider">
+        <div className="bg-[#706C63] about-you absolute px-10 py-10 text-white h-[370px] w-[981px]">
+          <h3 className="text-4xl about-heading pb-2 pt-3 font-semibold tracking-wider">
             It’s all about you
           </h3>
 
-          <p className="text-[20px] leading-relaxed max-w-[420px]">
+          <p className="text-[20px] about-text leading-relaxed max-w-[420px]">
             Try now, pay later. We want that you’re really confident and happy
             with your purchase – you have 30 days before we charge you! Learn
             more about our policy.
