@@ -26,13 +26,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
+      {/* hope this works */}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CartProvider>
           <FavoritesProvider>
             <Header />
-            {children}
+             {children}
             <Footer />
           </FavoritesProvider>
         </CartProvider>
