@@ -141,18 +141,17 @@ body {
 }
 
 /* Phones (max-width: 480px) */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 30rem) {
   /* One-column layout, mobile menu, full-width inputs */
 
-body{
-  overflow-x: hidden;
-  max-width: 480px;
-}
-
+  body {
+    overflow-x: hidden;
+    max-width: 30rem; /* 480px */
+  }
 
   /* Header */
-  .header{
-    position:fixed;
+  .header {
+    position: fixed;
     top: 0;
     left: 0;
     background-color: white;
@@ -160,162 +159,156 @@ body{
     width: 100%;
   }
 
-  .banner-height{
-    padding-top: 180px;
+  .banner-height {
+    padding-top: 11.25rem; /* 180px */
   }
 
-  .head-icons{
+  .head-icons {
     display: none;
   }
 
-  .main-header{
-    padding: 5px 14px;
+  .main-header {
+    padding: 0.3125rem 0.875rem; /* 5px 14px */
   }
 
-  .sm-allowed{
-    margin-left: 96px;
+  .sm-allowed {
+    margin-left: 6rem; /* 96px */
   }
 
   .icon-size {
-    width: 19px;
-    height: 21px;
+    width: 1.1875rem;  /* 19px */
+    height: 1.3125rem; /* 21px */
   }
 
-  .mall-categories, .line{
+  .mall-categories,
+  .line {
     display: none;
   }
 
-  .search{
+  .search {
     flex-direction: column-reverse;
-    padding: 5px 14px;
+    padding: 0.3125rem 0.875rem; /* 5px 14px */
   }
 
-  .input-field{
-    width: 365px;
-    padding: 20px, 5px;
+  .input-field {
+    width: 22.8125rem; /* 365px */
+    /* padding: 1rem 0.3125rem; 20px 5px */
   }
 
-  .btn-list-xl{
+  .btn-list-xl {
     display: none;
   }
 
-  .btn-categories{
+  .btn-categories {
     display: contents;
     display: flex;
-
   }
 
   /* Banner */
-  .banner-content{
-    padding: 0 14px;
+  .banner-content {
+    padding: 0 0.875rem; /* 14px */
   }
 
-  .banner-content h1{
-    font-size: 45px;
-  }
-  .banner-content h3{
-    font-size: 17px;
+  .banner-content h1 {
+    font-size: 2.8125rem; /* 45px */
   }
 
+  .banner-content h3 {
+    font-size: 1.0625rem; /* 17px */
+  }
 
   /* apocrypha styx */
-
-  .styx{
+  .styx {
     display: contents;
-    /* padding: 5px 50px; */
+    /* padding: 0.3125rem 3.125rem; */ /* 5px 50px */
   }
 
-  .section-header{
-    font-size: 17px;
+  .section-header {
+    font-size: 1.0625rem; /* 17px */
   }
 
-  .styx .kids{
+  .styx .kids {
     justify-content: center;
   }
 
-  .categories-image{
-    width: 110px;
+  .categories-image {
+    width: 6.875rem; /* 110px */
     aspect-ratio: 2/4;
     object-fit: cover;
-    /* I'm the best.... */
   }
 
   /* trending */
-
-  .trending-main, .recommended-container, .new-container{
-    padding: 5px 14px;
-    margin-top: 20px ;
+  .trending-main,
+  .recommended-container,
+  .new-container {
+    padding: 0.3125rem 0.875rem; /* 5px 14px */
+    margin-top: 1.25rem; /* 20px */
   }
 
-  .summer-container{
-    padding: 5px 14px;
+  .summer-container {
+    padding: 0.3125rem 0.875rem; /* 5px 14px */
   }
 
-  .about-you{
-    padding: 5px 14px;
-    /* margin-top: 30px; */
+  .about-you {
+    padding: 0.3125rem 0.875rem; /* 5px 14px */
     align-content: center;
   }
 
-  .about-text{
-    max-width: 375px;
-    font-size: 16px;
-    margin: 10px 0;
+  .about-text {
+    max-width: 23.4375rem; /* 375px */
+    font-size: 1rem; /* 16px */
+    margin: 0.625rem 0; /* 10px 0 */
   }
 
-  .about-heading{
-    font-size: 20px;
+  .about-heading {
+    font-size: 1.25rem; /* 20px */
   }
 
   /* spring and summer */
-  .summer-card{
+  .summer-card {
     flex-direction: column;
-    /* width: 100%; */
   }
-  
 
-  .eco-image{
-    width: 362px;
-    height: 200px;
+  .eco-image {
+    width: 22.625rem; /* 362px */
+    height: 12.5rem;  /* 200px */
   }
 
   /* footer */
-  .footer-container{
+  .footer-container {
     flex-direction: column;
-    padding: 5px 14px;
+    padding: 0.3125rem 0.875rem; /* 5px 14px */
   }
 
-  .footer-division{
+  .footer-division {
     width: 100%;
   }
 
-  .footer-text{
+  .footer-text {
     max-width: 100%;
   }
 
-  .handles{
+  .handles {
     justify-content: space-between;
   }
 
-  .footer-list{
+  .footer-list {
     width: 100%;
-    margin: 15px 5px;
+    margin: 0.9375rem 0.3125rem; /* 15px 5px */
   }
 
-  .footer-newsletter{
+  .footer-newsletter {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* 20px */
   }
 
-  .payment{
-    padding: 10px 14px;
+  .payment {
+    padding: 0.625rem 0.875rem; /* 10px 14px */
   }
 
-  .payment p{
-      font-size: 9px;
+  .payment p {
+    font-size: 0.5625rem; /* 9px */
   }
-  
-
 }
 
 
