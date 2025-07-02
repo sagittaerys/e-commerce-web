@@ -21,6 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "E-Commerce Website",
   description: "Created by sagittaerys_",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({ children }) {
@@ -28,9 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       {/* hope this works */}
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+    
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
