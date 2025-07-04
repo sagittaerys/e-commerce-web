@@ -42,7 +42,7 @@ export default function Header() {
         <span>20% Off Code: SAGITTAERYS29 - Terms Apply</span>
       </div>
 
-      <div className="container h-[147.22px]" id="small-height">
+      <div className="container border border-red h-[147.22px]" id="small-height">
         <div className="main-header flex justify-between px-10 py-4">
           <Link href="/">
             <div className="flex gap-2 items-center">
@@ -135,6 +135,7 @@ export default function Header() {
             </ul>
           </div>
         </div>
+
         {/* Categories -- Blocked out thia for small screens. This code is becoming a maze.... */}
 
         <div className="section  text-[14px] px-10">
@@ -161,33 +162,34 @@ export default function Header() {
 
             {/* btns */}
 
-            <ul className="btn-categories my-2 gap-3 font-base">
+            <ul className="btn-categories my-2 text-[10px] font-bold">
+
               <Link href="/sale">
-                <button className="px-2 pointer text-[10px] py-2 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                <button className="px-2 pointer  py-1 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
                   SALE
                 </button>
               </Link>
 
               <Link href="#new-arrivals">
-                <button className="px-2 pointer text-[10px] py-2 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                <button className="px-2 pointer py-1 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
                   NEW IN
                 </button>
               </Link>
 
               <Link href="/">
-                <button className="px-2 pointer py-2 text-[10px] bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                <button className="px-4 pointer py-1  bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
                   SHOES
                 </button>
               </Link>
 
               <Link href="/all-products">
-                <button className="px-2 pointer py-2 text-[10px] bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                <button className="px-2 pointer py-1  bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
                   ALL PRODUCTS
                 </button>
               </Link>
 
               <Link href="/brands">
-                <button className="px-2 pointer text-[10px] py-2 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
+                <button className="px-2 pointer  py-1 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
                   BRANDS
                 </button>
               </Link>

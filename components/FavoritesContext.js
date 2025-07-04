@@ -4,25 +4,25 @@
 
 import { createContext, useContext, useState, useEffect } from "react";
 
-// Step 1: Create the context
+// Create the context
 const FavoritesContext = createContext();
 
-// Step 2: Create the provider component
+// Create the provider component
 export const FavoritesProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([]);
 
-  // Optional: Load from localStorage on first render
+  // Loading from localStorage on first render
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("favorites")) || [];
     setFavorites(stored);
   }, []);
 
-  // Optional: Save to localStorage when favorites change
+  //  Saving to localStorage when favorites change
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 
-  // Step 3: Toggle favorite
+  // Toggle favorite
   const toggleFavorite = (productId) => {
     setFavorites((prev) =>
       prev.includes(productId)
@@ -38,5 +38,5 @@ export const FavoritesProvider = ({ children }) => {
   );
 };
 
-// Step 4: Hook to use the context easily
+
 export const useFavorites = () => useContext(FavoritesContext);

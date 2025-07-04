@@ -141,75 +141,60 @@ body {
 }
 
 /* Phones (max-width: 480px) */
-@media screen and (max-width: 30rem) {
-  /* One-column layout, mobile menu, full-width inputs */
-
-  body {
-    overflow-x: hidden;
-    max-width: 30rem; /* 480px */
+@media (max-width: 480px) {
+  .main-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
   }
 
-  /* Header */
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: white;
-    z-index: 1000;
-    width: 100%;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
-  .banner-height {
-    padding-top: 11.25rem; /* 180px */
+  .small-style {
+    width: auto !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 1;
   }
 
   .head-icons {
-    display: none;
-  }
-
-  .main-header {
-    padding: 0.3125rem 0.875rem; /* 5px 14px */
+    display: none; /* hide support + store on very small screen */
   }
 
   .sm-allowed {
-    margin-left: 6rem; /* 96px */
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: flex-end;
   }
 
+  .logo-text {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  /* Optional: shrink icon size a bit more */
   .icon-size {
-    width: 1.1875rem;  /* 19px */
-    height: 1.3125rem; /* 21px */
-  }
-
-  .mall-categories,
-  .line {
-    display: none;
-  }
-
-  .search {
-    flex-direction: column-reverse;
-    padding: 0.3125rem 0.875rem; /* 5px 14px */
+    width: 14px !important;
+    height: 16px !important;
   }
 
   .input-field {
-    width: 22.8125rem; /* 365px */
-    /* padding: 1rem 0.3125rem; 20px 5px */
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 100%;
   }
 
-  .btn-list-xl {
-    display: none;
-  }
-
-  .btn-categories {
-    display: contents;
-    display: flex;
-  }
-
-  /* Banner */
-  .banner-content {
-    padding: 0 0.875rem; /* 14px */
-  }
-
-  .banner-content h1 {
+   .banner-content h1 {
     font-size: 2.8125rem; /* 45px */
   }
 
@@ -217,7 +202,25 @@ body {
     font-size: 1.0625rem; /* 17px */
   }
 
-  /* apocrypha styx */
+  .btn-categories{
+    display: contents;
+    display: flex;
+    /* gap: 20px; */
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* blocked components */
+  .btn-list-xl , .mall-categories, .line{
+    display: none;
+  }
+
+  .search{
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 4px 14px;
+  }
+
   .styx {
     display: contents;
     /* padding: 0.3125rem 3.125rem; */ /* 5px 50px */
@@ -310,5 +313,8 @@ body {
     font-size: 0.5625rem; /* 9px */
   }
 }
+
+
+
 
 
