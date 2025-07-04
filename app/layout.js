@@ -1,12 +1,13 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Reuseable Components/header";
-import Footer from "../components/Reuseable Components/footer";
+// import Header from "@/components/Reuseable Components/header";
+// import Footer from "../components/Reuseable Components/footer";
 import { FavoritesProvider } from "@/components/FavoritesContext";
 import { CartProvider } from "@/components/Cart/cartContext";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ConditionalLayout from "./ConditionalLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,20 +26,16 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
+    return (
     <html lang="en">
-
       {/* hope this works */}
-    
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CartProvider>
           <FavoritesProvider>
-            <Header />
-             {children}
-            <Footer />
+            <ConditionalLayout>{children}</ConditionalLayout>
           </FavoritesProvider>
         </CartProvider>
 

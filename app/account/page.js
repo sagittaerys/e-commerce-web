@@ -168,14 +168,14 @@ const handleSubmit = async (e)  => {
 
             </div>
 
-            <button className="bg-[#23263B] rounded cursor-pointer border-none text-white w-[162.67px] h-[51px]" type="submit">Register</button>
+            <button className="bg-[#F78125] rounded cursor-pointer border-none text-white w-[162.67px] h-[51px]" type="submit">Register</button>
 
           </form>
           {/* Route to Login */}
           <div className="flex gap-1">
             <p className="text-[12px]">ALREADY A STEPPER?  
               </p>
-              <Link className="text-[#23263B] text-[12px] font-bold" href= "/login">
+              <Link className="text-[#F78125] text-[12px] font-bold" href= "/login">
                    LOGIN
               </Link>
           </div>

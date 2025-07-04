@@ -40,6 +40,8 @@ body {
   font-size: 12px;
 }
 
+
+
 .xs-default {
   background-color: #23263b;
   font-size: 12px;
@@ -54,6 +56,16 @@ body {
 
   /* border: 1px solid black; */
 }
+
+
+
+ 
+
+#login-remastered, .reg-form{
+ align-content: center;
+  height: 100vh;
+}
+
 
 .line {
   color: #23263b;
@@ -158,6 +170,36 @@ body {
 .slick-slider,
 .slick-track {
   overflow-x: visible;
+}
+
+.omni-product-grid{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.omni-product{
+  padding: 4px 14px;
+}
+
+
+/* login page */
+.page-icon{
+  display: none;
+}
+
+.reg-form{
+  width: 100%;
+}
+
+#login-remastered{
+  padding: 4px 14px;
+  margin: 40px 0;
+}
+
+
+.main-carpet{
+  display: contents !important;
 }
 
 .white-carpet{

@@ -42,7 +42,7 @@ export default function Header() {
         <span>20% Off Code: SAGITTAERYS29 - Terms Apply</span>
       </div>
 
-      <div className="container border border-red h-[147.22px]" id="small-height">
+      <div className="container h-[147.22px]" id="small-height">
         <div className="main-header flex justify-between px-10 py-4">
           <Link href="/">
             <div className="flex gap-2 items-center">
@@ -170,7 +170,7 @@ export default function Header() {
                 </button>
               </Link>
 
-              <Link href="#new-arrivals">
+              <Link href="/#new-arrivals">
                 <button className="px-2 pointer py-1 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
                   NEW IN
                 </button>
