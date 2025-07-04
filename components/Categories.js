@@ -4,7 +4,7 @@ import { IoFastFoodOutline } from "react-icons/io5";
 
 export default function Categories() {
   return (
-    <div className="container px-10 mt-6 styx">
+    <div className="container px-10 mt-6 w-full styx">
 
       <p className="unique-text text-[17px] font-bold mt-5 ml-3 ">
         SHOP BY CATEGORY

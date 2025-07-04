@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export default function AboutYou() {
   return (
-    <div className="container  h-[468px] bg-[white]">
+    <div className="container white-carpet  h-[468px] bg-[white]">
       <div className="layout relative">
         <div className="bg-[#706C63] about-you absolute px-10 py-10 text-white h-[370px] w-[981px]">
           <h3 className="text-4xl about-heading pb-2 pt-3 font-semibold tracking-wider">

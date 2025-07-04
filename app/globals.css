@@ -150,6 +150,20 @@ body {
     padding: 0 1rem;
   }
 
+  *{
+    overflow-x: scroll;
+  }
+
+.slick-list,
+.slick-slider,
+.slick-track {
+  overflow-x: visible;
+}
+
+.white-carpet{
+  display: none;
+}
+
   .logo {
     display: flex;
     align-items: center;
@@ -178,7 +192,7 @@ body {
 
   .logo-text {
     font-size: 1rem;
-    white-space: nowrap;
+    white-space: nowrap; 
   }
 
   /* Optional: shrink icon size a bit more */
@@ -273,7 +287,7 @@ body {
   }
 
   .eco-image {
-    width: 22.625rem; /* 362px */
+    width: 100%; /* 362px */
     height: 12.5rem;  /* 200px */
   }
 
