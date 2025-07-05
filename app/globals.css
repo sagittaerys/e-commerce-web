@@ -61,7 +61,7 @@ body {
 
  
 
-#login-remastered, .reg-form{
+#remastered, .reg-form{
  align-content: center;
   height: 100vh;
 }
@@ -73,6 +73,10 @@ body {
 
 .summer-card {
   /* border: 1px solid red; */
+}
+
+.mobile{
+  display: none;
 }
 
 /* HOLY GRAIL-- DO NOT TOUCH!!!! */
@@ -192,9 +196,26 @@ body {
   width: 100%;
 }
 
-#login-remastered{
+#remastered{
   padding: 4px 14px;
   margin: 40px 0;
+}
+
+.mobile{
+  display: contents;
+  text-align: center;
+}
+
+/* favorites grid */
+.favorites-grid{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+
+.access-description{
+  display: none;
 }
 
 

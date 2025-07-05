@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 export default function Dashboard() {
   const router = useRouter();
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -19,7 +19,7 @@ export default function Dashboard() {
     if (userData) {
       try {
         const parsedUser = JSON.parse(userData);
-        setEmail(parsedUser.email || "User"); // fallback if email doesn't exist
+        setName(parsedUser.name || "User"); // fallback if email doesn't exist
       } catch (error) {
         console.error("Error parsing user data:", error);
       }
@@ -29,7 +29,7 @@ export default function Dashboard() {
   return (
     <div className="container p-10">
       <div className="flex justify-between">
-        <h1 className="unique-text text-3xl">{`Welcome back, ${email}`}</h1>
+        <h1 className="unique-text text-3xl">{`Welcome back, ${name}`}</h1>
         <LogoutButton />
       </div>
     </div>

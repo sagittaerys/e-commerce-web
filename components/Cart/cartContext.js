@@ -1,4 +1,4 @@
-// components/CartContext.js
+
 "use client";
 
 import { createContext, useContext, useState, useEffect } from "react";
@@ -24,12 +24,11 @@ export const CartProvider = ({ children }) => {
   // Step 3: Add to cart logic
   const addToCart = (product) => {
     setCart((prev) => {
-      const existing = prev.find((item) => item.id === product.id);
-
+      const existing = prev.find((item) => item._id === product._id);
 
       if (existing) {
         return prev.map((item) =>
-          item.id === product.id
+          item._id === product._id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
@@ -39,46 +38,61 @@ export const CartProvider = ({ children }) => {
     });
   };
 
- //Add 1 value...
+  // Add 1 value...
+  const increaseQuantity = (id) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item._id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
 
- const increaseQuantity = (id) => {
-  setCart((prev) =>
-    prev.map((item) =>
-      item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-    )
-  );
-};
+  const reduceQuantity = (id) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item._id === id ? { ...item, quantity: item.quantity - 1 } : item
+      )
+      .filter((item) => item.quantity > 0)
+    );
+  };
 
-const reduceQuantity = (id) => {
-  setCart((prev) =>
-    prev.map((item) =>
-      item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-    )
-    .filter((item) => item.quantity > 0)
-  );
-};
+  const initializeCart = (items) => {
+    console.log("initializeCart called with:", items);
 
-const initializeCart = (items) => {
-  setCart(items); // Set cart state directly
-};
+    if (!Array.isArray(items)) {
+      console.warn("Cart data is not an array:", items);
+      return;
+    }
 
+    setCart(items); // Set cart state directly
+  };
 
   // Optional: remove
   const removeFromCart = (id) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
+    setCart((prev) => prev.filter((item) => item._id !== id));
   };
 
-
-  //be specific with the price....
+  // Get total amount with fallback pricing
   const getTotalAmount = () => {
-   console.log("Cart contents:", cart);
-  return cart.reduce((total, item) => total + item.discountedPrice * item.quantity, 0);
-};
-
+    console.log("Cart contents:", cart);
+    return cart.reduce((total, item) => {
+      // Use discountedPrice if available, otherwise fall back to price
+      const itemPrice = item.discountedPrice || item.price;
+      return total + itemPrice * item.quantity;
+    }, 0);
+  };
 
   // Step 4: Provide values
   return (
-    <CartContext.Provider value={{ cart, addToCart, initializeCart, removeFromCart, increaseQuantity, reduceQuantity, getTotalAmount }}>
+    <CartContext.Provider value={{ 
+      cart, 
+      addToCart, 
+      initializeCart, 
+      removeFromCart, 
+      increaseQuantity, 
+      reduceQuantity, 
+      getTotalAmount 
+    }}>
       {children}
     </CartContext.Provider>
   );

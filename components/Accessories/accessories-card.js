@@ -36,14 +36,50 @@ export default function AccessoriesCard({
   };
 
   // The Cart
-  const handleAddToCart = () => {
+  const handleAddToCart = async () => {
     const alreadyInCart = cart.some((item) => item.id === id);
-
+  
     if (alreadyInCart) {
       toast.info(`${name} is already in your cart.`);
-    } else {
-      addToCart({ id, name, discountedPrice, actualPrice, image, brand });
-      toast.success(`${name} added to cart!`);
+      return;
+    }
+  
+    // Add to local cart state
+    addToCart({ id, name, discountedPrice, actualPrice, image, brand });
+    toast.success(`${name} added to cart!`);
+  
+    // token signifying saving to local storage
+    const token = localStorage.getItem("token");
+  
+    if (token) {
+      const cartItem = {
+        productId: id,
+        name,
+        image,
+        quantity: 1,
+        price: discountedPrice,
+        brand,
+      };
+  
+      try {
+        const res = await fetch(`${API_BASE_URL}/api/auth/cart`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(cartItem),
+        });
+  
+        const data = await res.json();
+  
+        if (!res.ok) throw new Error(data.message || "Failed to save cart");
+  
+        console.log("Cart item saved to backend:", data.cart);
+      } catch (err) {
+        console.error("Error saving cart to backend:", err.message);
+        toast.error("Error saving cart online.");
+      }
     }
   };
 

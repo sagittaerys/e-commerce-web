@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { API_BASE_URL } from "@/lib/api";
-import { useRouter } from "next/navigation"; // ✅ CORRECT
+import { useRouter } from "next/navigation"; 
+import { toast } from "react-toastify";
 
 export default function LogInPage() {
   const [email, setEmail] = useState("");
@@ -55,8 +56,10 @@ export default function LogInPage() {
 
       if (res.ok) {
         // Save token to localStorage
-        console.log("Saving token and redirecting...");
+        toast.success("Login Successful!");
 
+
+        console.log("Saving token and redirecting...");
         localStorage.setItem("token", data.token);
 
         // Optional: Save user ID or email if returned
@@ -64,11 +67,14 @@ export default function LogInPage() {
 
         // Redirect to account/dashboard page
         router.push("/dashboard");
-        // or "/dashboard"
+        // success – handle token, redirect, etc.
+        
+        console.log("Login successful:", data);
+        
+      } else {
+        toast.error(data.message || "Login Failed!")
       }
 
-      // success – handle token, redirect, etc.
-      console.log("Login successful:", data);
 
       // e.g. save token: localStorage.setItem("token", data.token);
       // navigate to dashboard: router.push("/dashboard");
@@ -81,11 +87,11 @@ export default function LogInPage() {
 
   return (
     <div
-      id="login-remastered"
+      id="remastered"
       className="container justify-between  items-center flex "
     >
-      <div className="flex flex-col justify-between px-10 py-6 h-[100vh] bg-[#F78125]  w-[50%]">
-       
+      <div className="access-description flex flex-col justify-between px-10 py-6 h-[100vh] bg-[#F78125]  w-[50%]">
+        <Link href="/">
           <div className="flex gap-2 items-center">
             <Image
               src="/sage-centaur.png"
@@ -96,25 +102,44 @@ export default function LogInPage() {
             />
             <h1 className="logo-text">Sagittaerean Mall</h1>
           </div>
+        </Link>
 
-
-          <div className="text-content text-[#23263b] mx-5">
-              <h2 className="text-4xl font-bold">Your Go-To Destination for Seamless, Joyful Shopping.</h2>
-              <p className="text-[16px]">At Sagittaerean Mall, shopping is more than just buying — it’s an experience. From everyday must-haves to unexpected treasures, we bring convenience, style, and satisfaction right to your screen. Thoughtfully curated, endlessly rewarding.</p>
-          </div>
-
-          <div className="flex items-center justify-between">
-              <p> 2025 | Sagittaerean Mall | All Rights Reserved</p>
-              <button className="bg-[#23263b] rounded cursor-pointer border-none text-white w-[162.67px] h-[51px]">Need Help?</button>
-          </div>
-          
+        <div className="text-content text-[white] mx-5">
+          <h2 className="text-4xl font-bold">
+            Your Go-To Destination for Seamless, Joyful Shopping.
+          </h2>
+          <p className="text-[16px] mt-3">
+            At Sagittaerean Mall, shopping is more than just buying — it’s an
+            experience. From everyday must-haves to unexpected treasures, we
+            bring convenience, style, and satisfaction right to your screen.
+            Thoughtfully curated, endlessly rewarding.
+          </p>
         </div>
-      
 
-
+        <div className="flex text-white items-center justify-between">
+          <p> 2025 | Sagittaerean Mall | All Rights Reserved</p>
+          <button className="bg-[#23263b] rounded cursor-pointer border-none text-white w-[162.67px] h-[51px]">
+            Need Help?
+          </button>
+        </div>
+      </div>
 
       {/* Input Field... */}
       <div className="reg-form h-[100vh] px-10 w-[50%]">
+        <Link href="/">
+          <div className="mobile">
+            <Image
+              src="/sage-centaur.png"
+              className="logo"
+              alt="logo"
+              width={39.47}
+              height={35.22}
+            />
+          </div>
+        </Link>
+
+
+
         <h1 className="login-header font-bold text-[24px] text-[#23263B]">
           Welcome Back, Big Stepper!
         </h1>
@@ -126,7 +151,7 @@ export default function LogInPage() {
 
         {/* Error Siren!! */}
         {error && (
-          <p className="text-red-500 text-center bg-[pink] w-[507.16px] px-2 py-3">
+          <p className="text-red-500 text-center bg-[pink] w-[100%] px-2 py-3">
             {error}
           </p>
         )}

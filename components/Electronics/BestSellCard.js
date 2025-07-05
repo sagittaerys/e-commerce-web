@@ -59,7 +59,7 @@ export default function BestSellCard({
     };
 
     try {
-      const res = await fetch(`${API_BASE_URL}/api/cart`, {
+      const res = await fetch(`${API_BASE_URL}/api/auth/cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

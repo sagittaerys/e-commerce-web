@@ -17,7 +17,7 @@ export default function FavoritesPage(){
     <div className="container p-10">
         <h1 className="unique-text text-3xl font-bold mb-6 text-[#23263B]">Favorite Products</h1>
       
-      <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="favorites-grid grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
           {favoriteProducts.length === 0 ? (
         <p className="font-bold my-7">No favorites found....</p>
