@@ -52,7 +52,7 @@ export default function SupportPage() {
       </div>
 
       <div className="support-message w-[97%] px-10 rounded-xl mt-20 shadow-2xl py-10 mx-auto">
-        <h1 className="font-bold text-center text-[#23263B] text-[2rem]">
+        <h1 className="support-input font-bold text-center text-[#23263B] text-[2rem]">
           Send Us A Message
         </h1>
 
@@ -128,7 +128,7 @@ export default function SupportPage() {
         </form>
       </div>
 
-        <div className="bg-[#dcfce7] py-3 w-[97%] mx-auto rounded mt-[5rem] border border-[#86efac]">
+        <div className="siren bg-[#dcfce7] py-3 w-[97%] mx-auto rounded mt-[5rem] border border-[#86efac]">
             <p className="text-center text-[#91929D]">Support team is online and ready to help</p>
         </div>
     </div>

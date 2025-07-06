@@ -153,7 +153,7 @@ export default function Header() {
         <div className="third">
           <div className="search pt-2 flex px-10  justify-between items-center w-full">
             <ul className="btn-list-xl flex gap-4 font-base">
-              <Link href="/sale">SALE</Link>
+              <Link href="electronics/#sales">SALE</Link>
               <Link href="#new-arrivals">NEW IN</Link>
               <Link href="/">SHOES</Link>
               <Link href="/all-products">ALL PRODUCTS</Link>
@@ -164,7 +164,7 @@ export default function Header() {
 
             <ul className="btn-categories my-2 text-[10px] font-bold">
 
-              <Link href="/sale">
+              <Link href="electronics/#sales">
                 <button className="px-2 pointer  py-1 bg-gray-200 border border-[#666] hover:border-[#23263b] hover:border-2 text-gray-600 rounded-3xl">
                   SALE
                 </button>

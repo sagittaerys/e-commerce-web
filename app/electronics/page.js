@@ -8,7 +8,7 @@ export default function Electronics() {
 
       <div className="flex w-[100%] justify-between my-7 gap-3">
         <div className="w-[20%] shadow-xl rounded-xl  h-[447px] px-10 py-10">
-          <h2 className="font-bold text-[16px] text-[#23263B] unique-text">
+          <h2 id="sales" className="font-bold text-[16px] text-[#23263B] unique-text">
             SALE 40% OFF
           </h2>
 

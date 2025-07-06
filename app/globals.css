@@ -461,8 +461,12 @@ body {
     width: 100%;
   }
 
-  .support-header{
+  .support-header, .support-input{
     font-size: 25px;
+  }
+
+  .siren{
+    margin-bottom: 30px;
   }
 
   .support-card{
