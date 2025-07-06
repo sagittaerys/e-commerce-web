@@ -122,9 +122,11 @@ body {
   display: none;
 }
 
-.styx{
+.styx, .mini-list{
   display: none;
 }
+
+
 
 @media screen and (min-width: 1400px) {
   .container {
@@ -169,6 +171,10 @@ body {
   *{
     overflow-x: scroll;
   }
+
+.favorites-null{
+  padding: 4px 14px;
+}
 
 .slick-list,
 .slick-slider,
@@ -298,7 +304,7 @@ body {
     padding: 4px 14px;
   }
 
-  .styx {
+  .styx, .mini-list {
     display: contents;
     /* padding: 0.3125rem 3.125rem; */ /* 5px 50px */
   }
@@ -362,6 +368,7 @@ body {
 
   .footer-division {
     width: 100%;
+    margin-top: 40px;
   }
 
   .footer-text {
@@ -375,6 +382,7 @@ body {
   .footer-list {
     width: 100%;
     margin: 0.9375rem 0.3125rem; /* 15px 5px */
+    /* justify-content: space-around; */
   }
 
   .footer-newsletter {
@@ -389,6 +397,80 @@ body {
   .payment p {
     font-size: 0.5625rem; /* 9px */
   }
+
+
+  /* find a store page */
+  .find-store{
+    padding: 4px 14px;
+  }
+
+  .store-header{
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .find-header{
+    font-size: 25px;
+  }
+
+  .omni-form{
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .first-input, .find-store-btn{
+    width: 100%;
+  }
+
+  .filter-container{
+    padding: 30px 0;
+  }
+
+  .ocean-buttons{
+    padding: 4px 20px;
+    gap: 20px;
+  }
+
+  .ocean{
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 10px;
+  }
+
+  .store-card{
+    flex-direction: column;
+    /* width: 90%; */
+  }
+
+  /* .mapped-cards{
+    width: 100%;
+  } */
+
+
+  .main-card{
+    width: 100%;
+  }
+
+
+  /* support page */
+  .support-container{
+    padding: 4px 14px;
+  }
+
+  .support-text{
+    width: 100%;
+  }
+
+  .support-header{
+    font-size: 25px;
+  }
+
+  .support-card{
+    flex-direction: column;
+  }
+
+
+
 }
 
 

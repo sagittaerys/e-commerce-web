@@ -15,7 +15,7 @@ export default function FavoritesPage(){
 
   return(
     <div className="container p-10">
-        <h1 className="unique-text text-3xl font-bold mb-6 text-[#23263B]">Favorite Products</h1>
+        <h1 className="favorites-null unique-text text-3xl font-bold mb-6 text-[#23263B]">Favorite Products</h1>
       
       <div className="favorites-grid grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 gap-6">
 

@@ -4,8 +4,9 @@ export default function FindStore() {
 
 
   return (
-    <div className="container py-6 px-10">
-      <div className=" text-center mx-auto w-[50%]">
+    <div className="container find-store py-6 px-10">
+
+      <div className="store-header text-center mx-auto w-[50%]">
         <h1 className=" find-header text-[3rem] text-[#23263B] font-bold">Find A Store</h1>
         <p className="text-[#23263B] text-[16px]">
           Discover amazing stores at Sagittaerean Mall
@@ -15,14 +16,15 @@ export default function FindStore() {
       {/* The Potential Filter Field */}
 
       <div className="filter-container border border-[#23263B] mt-8 py-12 mx-auto w-[100%] shadow-xl rounded-xl">
-        <form className="gap-2 flex px-6">
+
+        <form className="omni-form gap-2 flex px-6">
           <input
             type="text"
             placeholder="Search stores, brands or products......"
-            className="py-3 text-[#91929D] pl-3 w-[60%] rounded-3xl border-[1.5px] border-[#23263B]"
+            className="first-input py-3 text-[#91929D] pl-3 w-[60%] rounded-3xl border-[1.5px] border-[#23263B]"
           />
 
-          <select className="py-2 pl-3 w-[25%] rounded-3xl border-[1.5px] border-[#23263B]">
+          <select className="first-input py-2 pl-3 w-[25%] rounded-3xl border-[1.5px] border-[#23263B]">
             <option value="">All Categories</option>
             <option>Fashion & Apparel</option>
             <option>Electronics</option>
@@ -30,22 +32,22 @@ export default function FindStore() {
             <option>Beauty & Recreation</option>
           </select>
 
-          <button className="p-2 w-[15%] rounded-3xl border-[2px] border-[#23263B] bg-[#23263B] text-white cursor-pointer hover:bg-[#3b3e57]">
+          <button className="find-store-btn p-2 w-[15%] rounded-3xl border-[2px] border-[#23263B] bg-[#23263B] text-white cursor-pointer hover:bg-[#3b3e57]">
             Search
           </button>
         </form>
 
-        <div className="buttons px-6 mt-4 flex gap-3">
-          <button className="rounded-3xl py-2 px-3 border-[1px] border-[#23263B] text-[#23263B] cursor-pointer hover:bg-[#3b3e57] hover:text-white">
+        <div className="ocean-buttons px-6 mt-4 flex gap-3">
+          <button className="ocean rounded-3xl py-2 px-3 border-[1px] border-[#23263B] text-[#23263B] cursor-pointer hover:bg-[#3b3e57] hover:text-white">
             All Stores
           </button>
-          <button className="rounded-3xl py-2 px-3 border-[1px] border-[#23263B] cursor-pointer hover:bg-[#3b3e57] text-[#23263B] hover:text-white">
-            Open Now
+          <button className="ocean rounded-3xl py-2 px-3 border-[1px] border-[#23263B] cursor-pointer hover:bg-[#3b3e57] text-[#23263B] hover:text-white">
+            Open
           </button>
-          <button className="rounded-3xl text-[#23263B] py-2 px-3 border-[1px] border-[#23263B] cursor-pointer hover:bg-[#3b3e57] hover:text-white">
+          <button className="ocean rounded-3xl text-[#23263B] py-2 px-3 border-[1px] border-[#23263B] cursor-pointer hover:bg-[#3b3e57] hover:text-white">
             Popular
           </button>
-          <button className="rounded-3xl text-[#23263B] py-2 px-3 border-[1px] border-[#23263B] cursor-pointer hover:bg-[#3b3e57] hover:text-white">
+          <button className="ocean rounded-3xl text-[#23263B] py-2 px-3 border-[1px] border-[#23263B] cursor-pointer hover:bg-[#3b3e57] hover:text-white">
             New Arrivals
           </button>
         </div>

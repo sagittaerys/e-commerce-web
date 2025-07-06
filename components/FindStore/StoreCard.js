@@ -40,7 +40,7 @@ const getMinutes = (hour, minute = 0) => hour * 60 + minute;
 
 
   return (
-    <div className="w-[24rem] rounded-xl shadow-xl p-4">
+    <div className="w-[24rem] main-card rounded-xl shadow-xl p-4">
       {/* Top */}
       <div className="flex items-center justify-between">
         <h2 className="font-bold text-[18px]">{header}</h2>

@@ -96,7 +96,7 @@ export default function Footer() {
         <ul className="w-[20%] py-2">
           <span className="unique-text text-[18px]">Shop</span>
           <Link href="/">
-            <li className="text-[14px] pt-1 my-3 ">New Arrivals</li>
+            <li className="text-[14px] pt-1 my-3 ">New</li>
           </Link>
           <Link href="/fashion">
             <li className="text-[14px] my-3">Fashion</li>
@@ -106,6 +106,9 @@ export default function Footer() {
           </Link>
           <Link href="/food">
             <li className="text-[14px] my-3">Food</li>
+          </Link>
+          <Link href="/find-store">
+            <li className="mini-list text-[14px] my-3">All Stores</li>
           </Link>
         </ul>
 
@@ -131,8 +134,12 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <li className="text-[14px] my-3">Email Support</li>
+            <li className="text-[14px] my-3">Email</li>
           </a>
+
+          <Link href="/support">
+            <li className="mini-list text-[14px] my-3">Support</li>
+          </Link>
         </ul>
         </div>
 

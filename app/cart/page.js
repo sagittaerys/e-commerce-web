@@ -57,11 +57,11 @@ export default function CartPage() {
     fetchCart();
   }, []);
 
-  // Debug cart data
+  // debug cart data
   console.log("Current cart state:", cart);
   console.log("Cart item IDs:", cart.map(item => item._id));
 
-  // Helper function to get unique key
+  // writing a function to get unique key
   const getUniqueKey = (item, index) => {
     if (item._id) {
       return item._id;
