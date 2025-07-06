@@ -126,6 +126,10 @@ body {
   display: none;
 }
 
+.product-btn{
+  width: 180px !important;
+}
+
 
 
 @media screen and (min-width: 1400px) {
@@ -471,6 +475,26 @@ body {
 
   .support-card{
     flex-direction: column;
+  }
+
+  /* quick view */
+  .quick-view-container{
+    flex-direction: column;
+    height: fit-content;
+
+  }
+
+  .quick-container{
+    padding: 4px 14px;
+  }
+
+  .quick-image{
+    width: 100%;
+    border: none;
+  }
+
+  .quick-description{
+    width: 100%;
   }
 
 
