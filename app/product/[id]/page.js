@@ -101,7 +101,7 @@ const handleAddToCart = async () => {
   return (
     <div className="container quick-container p-10">
 
-      {/* <Link className="product-btn w-[180px]" href="/electronics/#best-sellers">
+      <Link className="product-btn w-[180px]" href="/electronics/#best-sellers">
         <button className="rounded-xl  items-center flex gap-2 p-2  bg-white border  bg-[#E8600A] boborrder-[#23263B]">
           <FaArrowLeft className="text-[25px] text-[#E8600A]" />
 
@@ -109,7 +109,7 @@ const handleAddToCart = async () => {
             Back To Products
           </p>
         </button>
-      </Link> */}
+      </Link> 
 
       {/* Display */}
 
