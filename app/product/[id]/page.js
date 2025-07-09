@@ -21,7 +21,10 @@ export default function ProductPage({
   discountedPrice,
   image,
   brand,
-  }) {
+}) {
+
+const { cart, addToCart } = useCart();
+const { favorites, toggleFavorite } = useFavorites();
 
 const params = useParams();
   const id = params.id;
@@ -39,13 +42,11 @@ const params = useParams();
 
 
 
-const { favorites, toggleFavorite } = useFavorites();
 
 const isFavorite = favorites.includes(id);
 
   //Add to cart here
 
-const { cart, addToCart } = useCart();
 
 
 const handleAddToCart = async () => {
