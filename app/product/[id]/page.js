@@ -31,9 +31,17 @@ const { favorites, toggleFavorite } = useFavorites();
 
 const params = useParams();
   const id = params.id;
-  const omniArray = [...BestSellers,...recommendedProducts, ...accessories, ...products]
 
-  const unifier = omniArray.find((p) => p.id === id);
+
+
+  const omniArray = [...BestSellers,...recommendedProducts, ...accessories, ...products].map((item) => ({
+  ...item,
+  _id: item.id || item._id,  // adding _id for consistency
+}));
+
+  const unifier = omniArray.find((p) => p._id === id || p.id === id);
+  
+
 
   const percentageValue = () => {
     return unifier.actualPrice * 0.25;
@@ -53,28 +61,26 @@ const isFavorite = favorites.includes(id);
 
 
 const handleAddToCart = async () => {
-  const alreadyInCart = cart.some((item) => item.id === id);
+  const alreadyInCart = cart.some((item) => item._id === unifier._id);
 
   if (alreadyInCart) {
     toast.info(`${unifier.name} is already in your cart.`);
     return;
   }
 
-  // Add to local cart state
-  addToCart({ id, name, discountedPrice, actualPrice, image, brand });
+  addToCart(unifier);
   toast.success(`${unifier.name} added to cart!`);
 
-  // token signifying saving to local storage
   const token = localStorage.getItem("token");
 
   if (token) {
     const cartItem = {
-      productId: id,
-      name,
-      image,
+      productId: unifier._id,
+      name: unifier.name,
+      image: unifier.image,
       quantity: 1,
-      price: discountedPrice,
-      brand,
+      price: unifier.discountedPrice,
+      brand: unifier.brand,
     };
 
     try {
@@ -99,11 +105,17 @@ const handleAddToCart = async () => {
   }
 };
 
+// const handleOmniClick = () => {
+//   console.log("OmniArray contents:", omniArray);
+// };
 
 
   
   return (
     <div className="container quick-container p-10">
+
+      {/* <button onClick={handleOmniClick}>Log OmniArray</button> */}
+
 
 {/*
       <Link className="product-btn w-[180px]" href="/electronics/#best-sellers">

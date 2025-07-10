@@ -60,7 +60,8 @@ export default function CartPage() {
   // debug cart data
   console.log("Current cart state:", cart);
   console.log("Cart item IDs:", cart.map(item => item._id));
-
+  
+  
   // writing a function to get unique key
   const getUniqueKey = (item, index) => {
     if (item._id) {
@@ -71,6 +72,11 @@ export default function CartPage() {
     }
     return `cart-item-${index}`;
   };
+  
+  // variable
+  // const itemId = item.productId || item._id || `temp-${index}`;
+  
+
 
   return (
     <div className="container p-10">
@@ -91,6 +97,7 @@ export default function CartPage() {
         <p className="unique-text my-3">No Items In Cart</p>
       ) : (
         cart.map((item, index) => {
+
           const uniqueKey = getUniqueKey(item, index);
           const itemId = item._id || item.productId || `temp-${index}`;
           
@@ -139,7 +146,7 @@ export default function CartPage() {
 
                   <button
                     className="bg-[#F78125] text-white text-[12px] my-5 p-2 rounded-xl"
-                    onClick={() => reduceQuantity(itemId)}
+                    onClick={() => reduceQuantity(item._id)}
                   >
                     -1
                   </button>

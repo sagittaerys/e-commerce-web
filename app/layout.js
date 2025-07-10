@@ -20,7 +20,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "E-Commerce Website",
+  title: "Sagittaerean Mall",
+  icons: {
+  icon: '/sage-centaur-32x32.png',     
+  shortcut: '/sage-centaur-16x16.png',   
+  apple: '/sage-centaur-180x180.png',
+},
   description: "Created by sagittaerys_",
   viewport: "width=device-width, initial-scale=1",
 };

@@ -5,6 +5,7 @@ import { useFavorites } from "../FavoritesContext";
 
 import { useCart } from "../Cart/cartContext";
 
+import { API_BASE_URL } from "@/lib/api";
 
 import { toast } from "react-toastify";
 
