@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IoFastFoodOutline } from "react-icons/io5";
+
 
 export default function Categories() {
   return (
@@ -10,7 +10,7 @@ export default function Categories() {
         SHOP BY CATEGORY
       </p>
 
-      <div className="flex gap-4 my-3 kids">
+      <div className="flex w-[100%] justify-evenly my-3 kids">
 
         <Link className="hover:border-2 rounded-md hover:border-[#23263b]" href="/electronics">
           <div className="electronics">

@@ -318,11 +318,11 @@ body {
   }
 
   .styx .kids {
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   .categories-image {
-    width: 6.875rem; /* 110px */
+    width: 6.375rem; /* 110px */
     aspect-ratio: 2/4;
     object-fit: cover;
   }
