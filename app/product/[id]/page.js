@@ -201,12 +201,12 @@ const handleAddToCart = async () => {
           </div>
 
           <div className="my-7 items-end max-w-[86%]  flex gap-4">
-            <p className="text-[35px] font-bold text-[#F78125] unique-text">
+            <p className="quick-view-page text-[35px] font-bold text-[#F78125] unique-text">
               $ {unifier.discountedPrice}
             </p>
 
             <div className="flex gap-5 items-center">
-              <p className=" unique-text text-xl font-bold text-gray-600 line-through">
+              <p className="quick-view-text unique-text text-xl font-bold text-gray-600 line-through">
                 $ {unifier.actualPrice}
               </p>
 

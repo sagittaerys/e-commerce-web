@@ -93,16 +93,20 @@ export default function Header() {
 
             {/* className="w-[16px] h-[19px]" */}
 
-            <ul className="sm-allowed flex gap-4">
+            <ul className="sm-allowed">
+
+              <div className="inner-sm flex gap-4">
+
+
               <Link
                 onClick={toggleHeart}
                 href="/favorites"
-                className="icon-bl relative"
+                className="icon-bl relative  "
               >
                 {isFavorite ? (
-                  <FaHeart className="icon-size text-red-500 icon-size w-[16px] h-[19px]" />
+                  <FaHeart className="icon-size  text-red-500 icon-size w-[16px] " />
                 ) : (
-                  <FaRegHeart className="icon-size w-[16px] h-[19px]  hover:text-red-500" />
+                  <FaRegHeart className="icon-size w-[16px]   hover:text-red-500" />
                 )}
 
                 {/* Number Length */}
@@ -113,15 +117,15 @@ export default function Header() {
                 )}
               </Link>
 
-              <Link href="/account" className="unique-sm">
-                <IoPersonOutline className="icon-size w-[16px] h-[19px]" />
+              <Link href="/account" className="icon-bl unique-sm">
+                <IoPersonOutline className="icon-size w-[16px]" />
 
-                {/* <p className="small-screen">ACCOUNT</p> */}
+                
               </Link>
 
-              <Link href="/cart" className="unique-sm">
-                <div className="relative">
-                  <MdOutlineShoppingBag className="icon-size w-[16px] h-[19px]" />
+              <Link href="/cart" className="icon-bl unique-sm  relative ">
+               
+                  <MdOutlineShoppingBag className="icon-size w-[16px] " />
 
                   {/* Number Length */}
                   {cart.length > 0 && (
@@ -129,9 +133,9 @@ export default function Header() {
                       {cart.length}
                     </span>
                   )}
-                  <p className="small-screen">CART</p>
-                </div>
+                                 
               </Link>
+              </div>
             </ul>
           </div>
         </div>

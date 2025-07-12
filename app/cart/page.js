@@ -79,9 +79,9 @@ export default function CartPage() {
 
 
   return (
-    <div className="container p-10">
-      <div className="flex justify-between">
-        <h1 className="unique-text text-3xl text-[#23263b]">Your Cart</h1>
+    <div className="container cart-enclosure p-10">
+      <div className="flex cart-header justify-between">
+        <h1 className="unique-text  text-3xl text-[#23263b]">Your Cart</h1>
 
         <div>
           <h1 className="text-3xl unique-text text-[#23263b]">
@@ -103,11 +103,11 @@ export default function CartPage() {
           
           return (
             <div 
-              className="flex shadow-xl rounded-xl my-5 gap-5 items-center" 
+              className="flex product-container shadow-xl rounded-xl my-5 gap-5 items-center" 
               key={uniqueKey}
             >
               <div className="cart-image w-[20%]">
-                <Image
+                <Image className="product-img"
                   src={item.image}
                   width={210}
                   height={190}
@@ -116,13 +116,13 @@ export default function CartPage() {
               </div>
 
               <div className="cart-details py-2.5 px-10 w-[80%]">
-                <div>
+                <div className="product-details">
                   <span className="text-gray-600 text-[10px] text-[#666] font-semibold">
                     {item.brand}
                   </span>
                 </div>
 
-                <p className="text-xl font-bold">{item.name}</p>
+                <p className="product-name text-xl font-bold">{item.name}</p>
                 <p className="text-[#666] font-bold">Quantity: {item.quantity}</p>
 
                 <div className="flex gap-4 my-2 items-center">
@@ -136,23 +136,23 @@ export default function CartPage() {
                   )}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex buttons-line my-5 gap-4">
                   <button
-                    className="bg-[#F78125] text-white text-[12px] my-5 p-2 rounded-xl"
+                    className="bg-[#F78125] text-white text-[12px]  p-2 rounded-xl"
                     onClick={() => increaseQuantity(itemId)}
                   >
                     +1
                   </button>
 
                   <button
-                    className="bg-[#F78125] text-white text-[12px] my-5 p-2 rounded-xl"
+                    className="bg-[#F78125] text-white text-[12px]  p-2 rounded-xl"
                     onClick={() => reduceQuantity(item._id)}
                   >
                     -1
                   </button>
 
                   <button
-                    className="bg-[#F78125] text-white text-[12px] my-5 p-2 rounded-xl"
+                    className="bg-[#F78125] text-white text-[12px] p-2 rounded-xl"
                     onClick={() => removeFromCart(itemId)}
                   >
                     Remove

@@ -259,10 +259,28 @@ body {
   .sm-allowed {
     display: flex;
     gap: 0.75rem;
+    height: 30px;
+    width: 110px;
     align-items: center;
     justify-content: flex-end;
   }
 
+  .inner-sm{
+    justify-content: space-between;
+    width: 100%;
+    
+  }
+
+  .icon-bl{
+    height: 30px;
+    width: 33px;
+    align-content: center;
+  }
+
+  .icon-size{
+    height: 25px !important;
+
+  }
   .logo-text {
     font-size: 1rem;
     white-space: nowrap; 
@@ -280,6 +298,15 @@ body {
     margin-right: 1rem;
     width: 100%;
   }
+
+  /* quick view */
+  .quick-view-page{
+    font-size: 29px;
+  }
+  .quick-view-text{
+    font-size: 20px;
+  }
+
 
    .banner-content h1 {
     font-size: 2.8125rem; /* 45px */
@@ -497,8 +524,29 @@ body {
     width: 100%;
   }
 
+  /* cart page */
+  .cart-enclosure{
+    padding: 4px 14px;
+    margin-top: 30px;
+  }
 
+  .cart-header{
+    font-size: 25px;
+  }
 
+  .product-container{
+    flex-direction: column;
+  }
+
+  .cart-image, .cart-details{
+    width: 100%;
+  }
+
+  .product-img{
+    width: 100%;
+    height: 100%;
+  }
+  
 }
 
 
