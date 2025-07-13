@@ -3,11 +3,12 @@ import Link from "next/link";
 
 export default function Electronics() {
   return (
-    <div className="container px-10">
+    <div className="container elect-container px-10">
       {/* bg-[#F4F4F5] */}
 
-      <div className="flex w-[100%] justify-between my-7 gap-3">
-        <div className="w-[20%] shadow-xl rounded-xl  h-[447px] px-10 py-10">
+      <div className="flex elect-images w-[100%] justify-between my-7 gap-3">
+
+        <div className="w-[20%] discount-list shadow-xl rounded-xl  h-[447px] px-10 py-10">
           <h2 id="sales" className="font-bold text-[16px] text-[#23263B] unique-text">
             SALE 40% OFF
           </h2>
@@ -25,9 +26,11 @@ export default function Electronics() {
             <li className="py-1">Accessories</li>
           </ul>
         </div>
-        <div className="w-[650px] gap-2 justify-between flex flex-col  rounded-xl shadow-xl h-[447px]">
+
+        <div className="w-[650px] big-banner gap-2 justify-between flex flex-col  rounded-xl shadow-xl h-[447px]">
+
           <div className="big-image w-[650px] h-[310px] bg-[url('/slider3.png')] bg-cover p-8  bg-center rounded-xl flex flex-col gap-8">
-            <div className="text-white leading-tight">
+            <div className="text-white big-prop leading-tight">
               <h2 className="font-bold text-[30px]">Noise Cancelling</h2>
               <p className="font-extralight text-[30px]">Headphones</p>
             </div>
@@ -43,7 +46,7 @@ export default function Electronics() {
             </button>
           </div>
 
-          <div className="flex gap-5">
+          <div className="flex elect-middling gap-5">
             <div className="w-[316.98px] h-[120px] bg-[url('/slider4.png')] bg-cover bg-center rounded-xl">
               <div className=" p-4 text-[#23263B] font-medium max-w-[165.16px]">
                 <div>
@@ -72,10 +75,13 @@ export default function Electronics() {
             </div>
           </div>
         </div>
-        <div className="w-[308.98px] flex flex-col justify-between shadow-xl rounded-xl h-[447px]">
-          <div className="bg-[url('/slider6.png')]  bg-cover bg-left rounded-xl w-[308.98] h-[215px]">
+
+
+        <div className="elect-finale w-[308.98px] flex flex-col justify-between shadow-xl rounded-xl h-[447px]">
+
+          <div className="finale-kids bg-[url('/slider6.png')]  bg-cover bg-left rounded-xl w-[308.98] h-[215px]">
             <div className="py-4 flex flex-col items-end">
-              <div className="max-w-[118.81px]">
+              <div className="kid-content max-w-[118.81px]">
                 <span className="text-[12px] mt-3  font-bold">XOMIA</span>
                 <p className="text-[16px] mt-3 text-[#23263b] font-bold ">
                   Sport Water Resistant Watch
@@ -89,9 +95,9 @@ export default function Electronics() {
               </div>
             </div>
           </div>
-          <div className="bg-[url('/slider7.png')]  bg-cover bg-right rounded-xl w-[308.98] h-[215px]">
+          <div className="finale-kids bg-[url('/slider7.png')]  bg-cover bg-right rounded-xl w-[308.98] h-[215px]">
             <div className="p-5">
-              <div className="w-[110.36px] h-[82.8px] text-[20px] text-white">
+              <div className="kid-content w-[110.36px] h-[82.8px] text-[20px] text-white">
                 <p>
                   {" "}
                   <span className="font-bold">OKODO</span> Hero 11+ Black
