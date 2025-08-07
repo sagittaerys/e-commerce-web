@@ -18,7 +18,7 @@ A responsive, fullstack e-commerce application built with Next.js, Tailwind CSS,
 
 ## Stack
 
-- Next.js + JavaScript 
+- Next.js + JavaScript (JSX)
 - Tailwind CSS
 - React Context API
 - Vercel (Hosting)
